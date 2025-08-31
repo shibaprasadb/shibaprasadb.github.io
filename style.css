@@ -27,6 +27,12 @@ nav a:hover {
   color: #3498db;
 }
 
+nav .nav-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
 h1, h2 {
   color: #2c3e50;
 }
