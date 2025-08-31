@@ -103,3 +103,12 @@ a:hover {
   }
 }
 
+.pub-list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.pub-list li {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
