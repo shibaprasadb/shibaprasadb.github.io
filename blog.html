@@ -8,4 +8,13 @@ title: Blog
     <ul>
         <li><a href="https://datasignal.substack.com" target="_blank">Data Signal</a> – Technical content on data science and analytics</li>
     </ul>
+    <h2>Posts</h2>
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
