@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ '/images/headshot.jpg' | relative_url }}">
+    <!-- GoatCounter Analytics -->
+    <script data-goatcounter="https://shibaprasadb.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+    {% include nav.html %}
+    {{ content }}
+</body>
+</html>
