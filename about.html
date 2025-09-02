@@ -1,50 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Shibaprasad Bhattacharya</title>
-    <link rel='stylesheet' href='style.css'>
-    <link rel="icon" type="image/png" href="images/headshot.jpg">
-    <!-- GoatCounter Analytics -->
-    <script data-goatcounter="https://shibaprasadb.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
-</head>
-<body>
-    <div id="nav"></div>
-    <div class="container about">
-        <h1>About Me</h1>
+---
+layout: default
+title: About
+---
+<div class="container about">
+    <h1>About Me</h1>
 
-        <!-- Headshot -->
-        <img src="images/headshot.jpg" alt="Shibaprasad Bhattacharya" class="headshot" loading="lazy">
+    <!-- Headshot -->
+    <img src="images/headshot.jpg" alt="Shibaprasad Bhattacharya" class="headshot" loading="lazy">
 
-        <p>I believe analytics creates real value when it's tied to strategy and product decisions.
-        That's where I like to work - where data actually drives what happens next.</p>
+    <p>I believe analytics creates real value when it's tied to strategy and product decisions.
+    That's where I like to work - where data actually drives what happens next.</p>
 
-        <p>I do my best work on messy, ambiguous business problems.
-        The kind where you're not sure what question to ask, let alone how to answer it.
-        I've learned that framing the problem right is usually harder (and more important) than building the perfect model.</p>
+    <p>I do my best work on messy, ambiguous business problems.
+    The kind where you're not sure what question to ask, let alone how to answer it.
+    I've learned that framing the problem right is usually harder (and more important) than building the perfect model.</p>
 
-        <h3>Professional Journey</h3>
-        <p>My career has taken me through different industries: I started at Delhivery in Analytics & BI,
-        then moved to Air India's Operations Tech team, and now I'm with the Drug Development team at Bristol Myers Squibb,
-        working on projects that hopefully help patients.</p>
+    <h3>Professional Journey</h3>
+    <p>My career has taken me through different industries: I started at Delhivery in Analytics & BI,
+    then moved to Air India's Operations Tech team, and now I'm with the Drug Development team at Bristol Myers Squibb,
+    working on projects that hopefully help patients.</p>
 
-        <h3>Outside of Work</h3>
-        <p>When I'm not working with data, you can find me strength training,
-        exploring the art of brewing coffee, and occasionally writing on my newsletter,
-        where I share both technical explorations and personal reflections.</p>
+    <h3>Outside of Work</h3>
+    <p>When I'm not working with data, you can find me strength training,
+    exploring the art of brewing coffee, and occasionally writing on my newsletter,
+    where I share both technical explorations and personal reflections.</p>
 
-        <div class="contact">
-            <p><strong>Contact:</strong> <a href="mailto:shibaprasad.b@outlook.com">shibaprasad.b@outlook.com</a></p>
-        </div>
+    <div class="contact">
+        <p><strong>Contact:</strong> <a href="mailto:shibaprasad.b@outlook.com">shibaprasad.b@outlook.com</a></p>
     </div>
-    <script>
-        fetch('partials/nav.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('nav').innerHTML = html;
-            });
-    </script>
-</body>
-</html>
+</div>
