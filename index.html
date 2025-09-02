@@ -11,25 +11,25 @@
             async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="publications.html">Publications</a>
-        <a href="about.html">About</a>
-        <a href="https://www.linkedin.com/in/shibaprasad-bhattacharya/" target="_blank"><img src="images/linkedin_logo.png" alt="LinkedIn" class="nav-icon"></a>
-        <a href="https://github.com/shibaprasadb" target="_blank"><img src="images/github_logo.png" alt="GitHub" class="nav-icon"></a>
-    </nav>
+    <div id="nav"></div>
     <div class="container">
         <h1>Shibaprasad Bhattacharya</h1>
         <h2>Data Science | Product Thinking</h2>
         <p><em>Asking the right questions to unlock insights.</em></p>
 
-        <p>I am a Data Science Generalist who solves problems at the intersection of <strong>AI, Analytics, and Strategy</strong>. 
+        <p>I am a Data Science Generalist who solves problems at the intersection of <strong>AI, Analytics, and Strategy</strong>.
         I enjoy tackling ambiguous, challenging problems with product-driven thinking.</p>
 
         <p>Currently working as <strong>Data Analyst II at Bristol Myers Squibb</strong>. Previously, I worked at <strong>Air India</strong> and <strong>Delhivery</strong>.</p>
 
         <p><strong>Contact:</strong> <a href="mailto:shibaprasad.b@outlook.com">shibaprasad.b@outlook.com</a></p>
     </div>
+    <script>
+        fetch('partials/nav.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('nav').innerHTML = html;
+            });
+    </script>
 </body>
 </html>
