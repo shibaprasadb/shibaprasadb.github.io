@@ -2,15 +2,30 @@
 
 This repository hosts my personal website: [shibaprasadb.github.io](https://shibaprasadb.github.io).
 
-The site includes:
-- **Home**: Quick intro and links
-- **About**: My professional journey and interests
-- **Publications**: Selected research work
-- **Blog**: Link to my Data Signal Substack newsletter
+The site is built with [Jekyll](https://jekyllrb.com/).
 
-## Navigation
+## Structure
 
-The navigation bar markup lives in `partials/nav.html` and is loaded into each page with a small client-side script. Update `partials/nav.html` to change navigation links across the site.
+- `_layouts/default.html` – Base template that wraps each page and includes shared assets.
+- `_includes/nav.html` – Navigation bar. Edit this file to update links across the site.
+- `index.html` – Home page with a quick introduction and links.
+- `blog.html` – Links to my Data Signal newsletter.
+- `publications.html` – Selected research work.
+- `about.html` – Professional journey and interests.
+- `images/` – Icons and photographs used on the site.
+- `style.css` – Global styling.
+
+## Local development
+
+Install Jekyll and run the development server:
+
+```bash
+jekyll serve
+```
+
+Visit [http://localhost:4000](http://localhost:4000) to preview the site.
 
 ---
+
 Contact: [shibaprasad.b@outlook.com](mailto:shibaprasad.b@outlook.com)
+
