@@ -10,8 +10,7 @@ title: Blog
     </ul>
     <h2>Posts</h2>
     <ul class="post-list">
-        {% assign posts = site.posts %}
-        {% for post in posts %}
+        {% for post in site.posts | sort: 'date' | reverse %}
         <li>
             <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
             <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
