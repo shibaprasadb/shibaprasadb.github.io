@@ -1,0 +1,5 @@
+baseURL: "https://shibaprasadb.github.io"
+title: "Shibaprasad Bhattacharya"
+languageCode: "en-us"
+buildFuture: true
+theme: "minimal"

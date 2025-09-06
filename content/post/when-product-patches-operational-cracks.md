@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "When Product Patches Operational Cracks"
-tags: [product]
+date: 2025-07-02
+tags: ["product"]
 ---
 
 Ever notice how tech companies love slapping on fancy features instead of fixing what’s actually broken?  

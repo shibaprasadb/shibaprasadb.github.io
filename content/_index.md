@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Shibaprasad Bhattacharya
+title: "Shibaprasad Bhattacharya"
 ---
 <div class="container">
     <h1>Shibaprasad Bhattacharya</h1>
