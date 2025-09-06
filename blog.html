@@ -2,7 +2,8 @@
 layout: default
 title: Blog
 ---
-<div class="container">
+<div class="blog-container">
+  <div class="container">
     <h2>Posts</h2>
     <ul class="post-list">
       {% for post in site.posts %}
@@ -12,4 +13,14 @@ title: Blog
         </li>
       {% endfor %}
     </ul>
+  </div>
+  <aside class="tag-sidebar">
+    <h2>Tags</h2>
+    <ul class="tag-list">
+      {% assign sorted_tags = site.tags | sort_natural %}
+      {% for tag in sorted_tags %}
+        <li><a href="/tags/{{ tag[0] | slugify }}/">{{ tag[0] }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
 </div>
