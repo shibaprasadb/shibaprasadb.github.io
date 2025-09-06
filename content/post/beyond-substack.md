@@ -1,7 +1,7 @@
 ---
-layout: post
-title: Why I’m Cross-Posting Beyond Substack
-tags: [reflections]
+title: "Why I’m Cross-Posting Beyond Substack"
+date: 2025-09-02
+tags: ["reflections"]
 ---
 I have been using Substack for some time now.  
 
