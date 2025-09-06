@@ -2,9 +2,9 @@
 layout: default
 ---
 <div class="container">
-  <h2>Posts tagged "{{ page.tag }}"</h2>
+  <h2>Posts tagged "{{ page.title }}"</h2>
   <ul class="post-list">
-    {% for post in site.tags[page.tag] %}
+    {% for post in page.posts %}
       <li class="post-item">
         <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
