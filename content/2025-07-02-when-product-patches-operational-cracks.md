@@ -1,8 +1,7 @@
----
-layout: post
-title: "When Product Patches Operational Cracks"
-tags: [product]
----
+Title: When Product Patches Operational Cracks
+Date: 2025-07-02
+Tags: product
+
 
 Ever notice how tech companies love slapping on fancy features instead of fixing what’s actually broken?  
 It’s like installing a smart doorbell on a house with no locks. Here’s a perfect example from India’s cab scene and why this kind of thinking is completely backwards.

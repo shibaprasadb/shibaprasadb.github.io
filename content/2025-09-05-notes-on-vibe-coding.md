@@ -1,8 +1,7 @@
----
-layout: post
-title: Notes on Vibe Coding
-tags: [technical]
----
+Title: Notes on Vibe Coding
+Date: 2025-09-05
+Tags: technical
+
 
 I have been using LLMs (Claude and ChatGPT) for coding a lot, especially for my secondary languages (like Python).
 

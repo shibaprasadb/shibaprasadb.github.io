@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h2>Posts tagged "{{ tag }}"</h2>
+  <ul class="post-list">
+    {% for article in articles %}
+      <li class="post-item">
+        <a class="post-title" href="{{ article.url }}">{{ article.title }}</a>
+        <span class="post-date">{{ article.date.strftime('%B %-d, %Y') }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

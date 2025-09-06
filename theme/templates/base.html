@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }}{% if SITENAME %} - {{ SITENAME }}{% endif %}{% else %}{{ SITENAME }}{% endif %}</title>
+    <link rel="stylesheet" href="{{ SITEURL }}/style.css">
+    <link rel="icon" type="image/png" href="{{ SITEURL }}/images/headshot.jpg">
+    <!-- GoatCounter Analytics -->
+    <script data-goatcounter="https://shibaprasadb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <!-- Umami Analytics -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="2e67cd5c-f499-4fba-a139-481c5adb30c4"></script>
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% block content %}{% endblock %}
+</body>
+</html>
