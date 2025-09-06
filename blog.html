@@ -17,9 +17,9 @@ title: Blog
   <aside class="tag-sidebar">
     <h2>Tags</h2>
     <ul class="tag-list">
-      {% assign sorted_tags = site.tags | keys | sort_natural %}
+      {% assign sorted_tags = site.tags | sort_natural %}
       {% for tag in sorted_tags %}
-        <li><a href="/tags/{{ tag | slugify }}/">{{ tag }}</a></li>
+        <li><a href="/tags/{{ tag[0] | slugify }}/">{{ tag[0] }}</a></li>
       {% endfor %}
     </ul>
   </aside>
