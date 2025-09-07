@@ -1,16 +1,18 @@
-.blue-bar {
-  background-color: #007bff;
-  height: 50px;
-}
-
 nav {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 1rem;
+  background-color: #0056b3;
+  height: 50px;
+  align-items: center;
+  width: 100%;
 }
 
 nav a {
   text-decoration: none;
-  color: inherit;
+  color: white;
+}
+
+nav a:visited {
+  color: white;
 }
