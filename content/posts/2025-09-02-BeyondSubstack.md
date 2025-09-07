@@ -1,8 +1,7 @@
----
-layout: post
-title: Why I’m Cross-Posting Beyond Substack
-tags: [reflections]
----
+Title: Why I’m Cross-Posting Beyond Substack
+Date: 2025-09-02
+Tags: reflections
+
 I have been using Substack for some time now.  
 
 I have two blog-newsletters: one where I write about [my reflections](https://ordinaryanalysis.substack.com/), and another that is [data-tech related](https://datasignal.substack.com/).  

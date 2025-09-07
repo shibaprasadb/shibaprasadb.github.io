@@ -1,8 +1,7 @@
----
-layout: post
-title: Notes on Vibe Coding
-tags: [technical]
----
+Title: Notes on Vibe Coding
+Date: 2025-09-05
+Tags: technical
+
 
 I have been using LLMs (Claude and ChatGPT) for coding a lot, especially for my secondary languages (like Python).
 
@@ -16,7 +15,7 @@ Here are some notes and observations:
 
 I am not a software engineer in any shape or form. I just have a basic understanding because of my work, and that proved to be quite crucial in this whole exercise. The biggest hurdle I found while doing vibe-coding was that the code wasn’t modular enough most of the time. I had to give constant nudges like this:
 
-[![Don't just vibe code.](/images/posts/2025-09-05-notes-vibecoding/vibe_nudge.png)](/images/posts/2025-09-05-notes-vibecoding/vibe_nudge.png)
+[![Don't just vibe code.]({{ SITEURL }}/images/posts/2025-09-05-notes-vibecoding/vibe_nudge.png)]({{ SITEURL }}/images/posts/2025-09-05-notes-vibecoding/vibe_nudge.png)
 
 
 And once prompted, it did a good job of modifying.
