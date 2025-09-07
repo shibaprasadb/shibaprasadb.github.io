@@ -1,0 +1,16 @@
+.blue-bar {
+  background-color: #007bff;
+  height: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
