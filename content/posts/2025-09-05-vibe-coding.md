@@ -1,8 +1,8 @@
----
-layout: post
-title: Notes on Vibe Coding
-tags: [technical]
----
+Title: Notes on Vibe Coding
+Date: 2025-09-05
+Category: Blog
+Tags: technical
+
 
 I have been using LLMs (Claude and ChatGPT) for coding a lot, especially for my secondary languages (like Python).
 
@@ -35,6 +35,5 @@ It is not a very common thing, but it has happened to me when the output produce
 
 If you have too many files, then probably something like Cursor or Codex might help more.
 
----
 
 These have been my observations and experience so far. I’ll be experimenting more and plan to update this in 2–3 months. Curious to know: how has your experience been when coding with LLMs?

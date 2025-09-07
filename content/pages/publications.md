@@ -1,7 +1,7 @@
----
-layout: default
-title: Publications
----
+Title: Publications
+Save_as: publications.html
+Url: publications.html
+
 <div class="container">
     <h1>Publications</h1>
     <ul class="pub-list">

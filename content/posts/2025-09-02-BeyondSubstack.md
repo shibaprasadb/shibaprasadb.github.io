@@ -1,8 +1,8 @@
----
-layout: post
-title: Why I’m Cross-Posting Beyond Substack
-tags: [reflections]
----
+Title: Why I’m Cross-Posting Beyond Substack
+Date: 2025-09-02
+Category: Blog
+Tags: reflections
+
 I have been using Substack for some time now.  
 
 I have two blog-newsletters: one where I write about [my reflections](https://ordinaryanalysis.substack.com/), and another that is [data-tech related](https://datasignal.substack.com/).  
@@ -22,7 +22,6 @@ Let's see how it goes.
 
 I created this website with some vibe coding and through some LLM-driven (non-vibe-coding) help. My next post will be related to that. I enjoyed my first vibe coding explorations, but there are some pitfalls.  
 
----
 
 This is my first post on this site. Going forward, I’ll be using this space for my **technical explorations** — topics around data science, analytics, product thinking, and experiments with new tools and workflows.  
 

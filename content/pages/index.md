@@ -1,7 +1,7 @@
----
-layout: default
-title: Shibaprasad Bhattacharya
----
+Title: Shibaprasad Bhattacharya
+Save_as: index.html
+Url: index.html
+
 <div class="container">
     <h1>Shibaprasad Bhattacharya</h1>
     <h2>Data Science | Product Thinking</h2>

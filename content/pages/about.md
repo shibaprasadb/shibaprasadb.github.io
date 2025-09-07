@@ -1,7 +1,7 @@
----
-layout: default
-title: About
----
+Title: About
+Save_as: about.html
+Url: about.html
+
 <div class="container about">
     <h1>About Me</h1>
 

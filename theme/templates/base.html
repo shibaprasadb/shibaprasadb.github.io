@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+
+  <!-- Umami Analytics -->
+  <script async src="https://your-umami-domain/script.js"
+          data-website-id="YOUR-UMAMI-ID"></script>
+</head>
+<body>
+  <nav>
+    <a href="{{ SITEURL }}/index.html">Home</a>
+    <a href="{{ SITEURL }}/blog.html">Blog</a>
+    <a href="{{ SITEURL }}/publications.html">Publications</a>
+    <a href="{{ SITEURL }}/about.html">About</a>
+    <a href="{{ SITEURL }}/subscribe.html">Subscribe</a>
+  </nav>
+
+  <main class="container">
+    {% block content %}{% endblock content %}
+  </main>
+</body>
+</html>

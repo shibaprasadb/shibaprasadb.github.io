@@ -2,30 +2,34 @@
 
 This repository hosts my personal website: [shibaprasadb.github.io](https://shibaprasadb.github.io).
 
-The site is built with [Jekyll](https://jekyllrb.com/).
+The site is built with [Pelican](https://getpelican.com/), a Python-based static site generator.
 
 ## Structure
 
-- `_layouts/default.html` – Base template that wraps each page and includes shared assets.
-- `_includes/nav.html` – Navigation bar. Edit this file to update links across the site.
-- `index.html` – Home page with a quick introduction and links.
-- `blog.html` – Links to my Data Signal newsletter.
-- `publications.html` – Selected research work.
-- `about.html` – Professional journey and interests.
+- `content/` – Source content for posts and pages.
+- `content/posts/` – Blog posts.
+- `content/pages/` – Static pages like About and Publications.
 - `images/` – Icons and photographs used on the site.
-- `style.css` – Global styling.
+- `theme/` – Custom templates and styles.
+- `pelicanconf.py` – Site configuration.
 
 ## Local development
 
-Install Jekyll and run the development server:
+Install Pelican and Markdown:
 
 ```bash
-jekyll serve
+pip install pelican markdown
 ```
 
-Visit [http://localhost:4000](http://localhost:4000) to preview the site.
+Generate the site and start a local server:
+
+```bash
+pelican content
+pelican --listen
+```
+
+Visit [http://localhost:8000](http://localhost:8000) to preview the site.
 
 ---
 
 Contact: [shibaprasad.b@outlook.com](mailto:shibaprasad.b@outlook.com)
-
