@@ -12,3 +12,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 PAGE_URL = '{slug}.html'
 PAGE_SAVE_AS = '{slug}.html'
+
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives')
+OUTPUT_PATH = 'docs'
+STATIC_PATHS = ['images']
