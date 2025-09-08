@@ -13,3 +13,13 @@ title: Blog
       {% endfor %}
     </ul>
 </div>
+
+<div class="container">
+    <h2>Categories</h2>
+    <ul class="category-list">
+      {% assign sorted_tags = site.tags | sort %}
+      {% for tag in sorted_tags %}
+        <li><a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a> ({{ tag[1].size }})</li>
+      {% endfor %}
+    </ul>
+</div>
