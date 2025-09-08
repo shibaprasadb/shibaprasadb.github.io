@@ -15,5 +15,19 @@
 <body>
     {% include nav.html %}
     {{ content }}
+    <footer class="site-footer">
+      <p>© 2025 Shibaprasad Bhattacharya</p>
+      <p>
+        <a href="https://linkedin.com/in/shibaprasadb" target="_blank">LinkedIn</a> ·
+        <a href="https://github.com/shibaprasadb" target="_blank">GitHub</a> ·
+        <a href="https://datasignal.substack.com" target="_blank">Substack</a>
+      </p>
+    </footer>
+    <script>
+      const toggle = document.getElementById('dark-toggle');
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+      });
+    </script>
 </body>
 </html>
