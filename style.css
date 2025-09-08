@@ -129,7 +129,15 @@ a:hover {
 }
 
 .post-list li {
-  margin-bottom: 10px;
+  list-style: none;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.post-list li:hover {
+  background: #f2fafa;
 }
 
 .post-date {
@@ -161,4 +169,81 @@ a:hover {
 .category-list li {
   display: block;
   margin: 0 0 10px 0;
+}
+
+/* Hero banner */
+.hero {
+  background: linear-gradient(135deg, #2c3e50, #1abc9c);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+/* Dark mode toggle button */
+#dark-toggle {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.3s;
+}
+
+#dark-toggle:hover {
+  color: #1abc9c;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .container {
+  background: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode nav {
+  background: #111;
+}
+
+body.dark-mode nav a {
+  color: #e0e0e0;
+}
+
+body.dark-mode #dark-toggle {
+  color: #e0e0e0;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.site-footer a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
 }
