@@ -1,0 +1,9 @@
+---
+title: "Tags"
+format: html
+listing:
+  contents: posts
+  type: default
+  categories: true
+---
+

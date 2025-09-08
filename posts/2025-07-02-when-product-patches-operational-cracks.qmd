@@ -1,7 +1,7 @@
 ---
-layout: post
 title: "When Product Patches Operational Cracks"
-tags: [product]
+format: html
+categories: [product]
 ---
 
 Ever notice how tech companies love slapping on fancy features instead of fixing what’s actually broken?  
