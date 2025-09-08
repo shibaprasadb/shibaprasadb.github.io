@@ -133,3 +133,27 @@ a:hover {
   font-size: 0.9em;
   margin-left: 10px;
 }
+
+.blog-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.posts-container {
+  flex: 3;
+}
+
+.categories-container {
+  flex: 1;
+}
+
+.category-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.category-list li {
+  margin-bottom: 10px;
+}
