@@ -171,26 +171,54 @@ a:hover {
   margin: 0 0 10px 0;
 }
 
-/* Hero banner */
+/* Hero */
 .hero {
-  background: linear-gradient(135deg, #2c3e50, #1abc9c);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
+  position: relative;
+  background: linear-gradient(135deg, #26415a 0%, #1abc9c 100%);
   border-radius: 12px;
   margin-bottom: 40px;
+  padding: 72px 24px;
+  overflow: hidden;
+}
+
+/* Subtle overlay for contrast on any screens */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,.12), rgba(0,0,0,.25) 70%);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative; /* sits above overlay */
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  font-family: 'Playfair Display', serif;
+  color: #fff;               /* white name */
+  font-family: 'Playfair Display', serif; /* keep your display font */
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0 0 10px 0;
+  letter-spacing: .3px;
+  text-shadow: 0 2px 6px rgba(0,0,0,.25); /* readability on gradient */
 }
 
-.hero p {
-  font-size: 1.3em;
-  font-weight: 300;
+.hero-sub {
+  color: #e9f9f5;            /* soft white/teal */
+  font-weight: 500;
+  letter-spacing: .4px;
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+  margin: 0;
+  opacity: .95;
 }
+
+/* If your nav is sticky, give the next section a bit more top space */
+.container:first-of-type { scroll-margin-top: 80px; }
 
 /* Dark mode toggle button */
 #dark-toggle {
