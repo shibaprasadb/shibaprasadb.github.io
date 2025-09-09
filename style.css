@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 body {
   font-family: 'Open Sans', sans-serif;
@@ -38,7 +38,6 @@ nav .nav-icon {
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
   color: #2c3e50;
 }
 
@@ -173,48 +172,32 @@ a:hover {
 
 /* Hero */
 .hero {
-  position: relative;
   background: linear-gradient(135deg, #26415a 0%, #1abc9c 100%);
   border-radius: 12px;
   margin-bottom: 40px;
   padding: 72px 24px;
-  overflow: hidden;
-}
-
-/* Subtle overlay for contrast on any screens */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,.12), rgba(0,0,0,.25) 70%);
-  mix-blend-mode: multiply;
-  pointer-events: none;
 }
 
 .hero-inner {
-  position: relative; /* sits above overlay */
   max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
 
 .hero h1 {
-  color: #fff;               /* white name */
-  font-family: 'Playfair Display', serif; /* keep your display font */
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  line-height: 1.15;
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
   margin: 0 0 10px 0;
-  letter-spacing: .3px;
-  text-shadow: 0 2px 6px rgba(0,0,0,.25); /* readability on gradient */
+  font-weight: 700;
 }
 
 .hero-sub {
-  color: #e9f9f5;            /* soft white/teal */
+  color: #f1f1f1;
   font-weight: 500;
   letter-spacing: .4px;
-  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   margin: 0;
-  opacity: .95;
 }
 
 /* If your nav is sticky, give the next section a bit more top space */
