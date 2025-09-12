@@ -200,6 +200,14 @@ a:hover {
   margin: 0;
 }
 
+.hero-motto {
+  margin-top: 12px;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #f9f9f9;   /* softer white for contrast */
+  opacity: 0.95;
+}
+
 /* If your nav is sticky, give the next section a bit more top space */
 .container:first-of-type { scroll-margin-top: 80px; }
 
