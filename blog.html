@@ -5,24 +5,109 @@ title: Blog
 <div class="container">
     <div class="blog-wrapper">
         <div class="blog-posts">
-            <h2>Posts</h2>
-            <ul class="post-list">
-              {% for post in site.posts %}
-                <li class="post-item">
-                  <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                  <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
-                </li>
-              {% endfor %}
-            </ul>
+            <h2 id="posts-heading">Posts</h2>
+            {% include post-list.html posts=site.posts list_id='blog-post-list' %}
+            <p class="no-posts" id="no-posts-message" hidden>No posts found for this category yet.</p>
         </div>
         <aside class="blog-categories">
             <h3>Categories</h3>
             <ul class="category-list">
+              <li><a href="{{ '/blog.html' | relative_url }}" data-tag-name="" data-tag-slug="">All posts</a></li>
               {% assign sorted_tags = site.tags | sort %}
               {% for tag in sorted_tags %}
-                <li><a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a> ({{ tag[1].size }})</li>
+                {% assign tag_name = tag[0] %}
+                {% assign tag_slug = tag_name | slugify %}
+                <li>
+                  <a href="{{ '/blog.html?tag=' | append: tag_slug | relative_url }}"
+                     data-tag-name="{{ tag_name }}"
+                     data-tag-slug="{{ tag_slug }}">
+                    {{ tag_name }}
+                  </a>
+                  ({{ tag[1].size }})
+                </li>
               {% endfor %}
             </ul>
         </aside>
     </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const postsList = document.getElementById('blog-post-list');
+    if (!postsList) {
+      return;
+    }
+
+    const heading = document.getElementById('posts-heading');
+    const noPostsMessage = document.getElementById('no-posts-message');
+    const postItems = Array.from(postsList.querySelectorAll('.post-item'));
+    const categoryLinks = Array.from(document.querySelectorAll('.category-list a'));
+
+    function setActiveLink(tagSlug) {
+      categoryLinks.forEach(function (link) {
+        const isActive = (link.dataset.tagSlug || '') === (tagSlug || '');
+        link.classList.toggle('active', isActive);
+      });
+    }
+
+    function updatePostsForTag(tagSlug, tagName, options) {
+      const config = options || {};
+      let visibleCount = 0;
+
+      postItems.forEach(function (item) {
+        const tags = item.dataset.tags ? item.dataset.tags.split(',') : [];
+        const shouldShow = !tagSlug || tags.includes(tagSlug);
+        item.hidden = !shouldShow;
+
+        if (shouldShow) {
+          visibleCount += 1;
+        }
+      });
+
+      if (tagSlug && !tagName) {
+        const matchingLink = categoryLinks.find(function (link) {
+          return (link.dataset.tagSlug || '') === tagSlug;
+        });
+        if (matchingLink) {
+          tagName = matchingLink.dataset.tagName;
+        }
+      }
+
+      if (tagSlug && tagName) {
+        heading.textContent = 'Posts tagged "' + tagName + '"';
+      } else {
+        heading.textContent = 'Posts';
+      }
+
+      if (noPostsMessage) {
+        noPostsMessage.hidden = visibleCount !== 0;
+      }
+
+      setActiveLink(tagSlug);
+
+      if (!config.skipHistoryUpdate) {
+        const url = new URL(window.location);
+        if (tagSlug) {
+          url.searchParams.set('tag', tagSlug);
+        } else {
+          url.searchParams.delete('tag');
+        }
+        window.history.replaceState({}, '', url);
+      }
+    }
+
+    categoryLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        updatePostsForTag(link.dataset.tagSlug || '', link.dataset.tagName || '');
+      });
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const initialTag = params.get('tag') || '';
+    if (initialTag) {
+      updatePostsForTag(initialTag, null, { skipHistoryUpdate: true });
+    } else {
+      updatePostsForTag('', '', { skipHistoryUpdate: true });
+    }
+  });
+</script>
