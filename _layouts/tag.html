@@ -3,5 +3,6 @@ layout: default
 ---
 <div class="container">
   <h2>Posts tagged "{{ page.tag }}"</h2>
-  {% include post-list.html posts=site.tags[page.tag] %}
+  {% assign tag_posts = site.tags[page.tag] %}
+  {% include post-list.html posts=tag_posts %}
 </div>
