@@ -170,6 +170,17 @@ a:hover {
   margin: 0 0 10px 0;
 }
 
+.category-list a.active {
+  font-weight: 700;
+  color: #1d6fa5;
+}
+
+.no-posts {
+  color: #777;
+  font-style: italic;
+  margin-top: 10px;
+}
+
 /* Hero */
 .hero {
   background: linear-gradient(135deg, #26415a 0%, #1abc9c 100%);
