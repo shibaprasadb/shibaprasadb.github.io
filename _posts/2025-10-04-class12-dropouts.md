@@ -2,6 +2,7 @@
 title: "The Curious Case of West Bengal's Disappearing Class 12 Students"
 date: 2025-10-04
 tags: ["data-stories"]
+image: "https://www.shibaprasadb.com/images/posts/2025-10-04-class12-dropout/students_by_state_facets.png"
 ---
 
 Recently, I came across some surprising statistics. In West Bengal, for the final exam of Class 12, this year (2025) almost **3 lakhs fewer students** appeared compared to previous years. The figure sounded mind-bogglingly shocking to me. The [board secretary](https://timesofindia.indiatimes.com/city/kolkata/hs-numbers-drop-by-1/3rd-from-last-year/articleshow/118586088.cms) highlighted that this happened because they brought in a rule in 2017 - that mandated students need to be 10 years old in Class 5.
