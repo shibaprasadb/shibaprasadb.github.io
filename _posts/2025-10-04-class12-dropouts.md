@@ -123,7 +123,8 @@ Haryana’s decline is notable but less discussed. I haven’t found evidence of
 
 This exploratory analysis raises more questions than it answers (which has been my goal anyways for this newsletter):  
 
-- **Granular age-cohort data**: Getting actual 15–19 or 16–20 population data by state would dramatically improve the accuracy of per-capita calculations.  
+- **Granular age-cohort data**: Getting actual 15–19 or 16–20 population data by state would dramatically improve the accuracy of per-capita calculations.
+- **Covid's shadow**: Does the pandemic have something to do with this? The 2024-2025 cohort would have been in Classes 9-10 during 2020-2021 (peak Covid years). If the pandemic disproportionately affected rural schooling (due to a lack of digital infrastructure), we might see this reflected in the numbers. Breaking down the data by urban-rural divide would help determine if Covid-induced dropouts are part of the story.
 - **Pre-2017 enrollment patterns**: Analyzing the age distribution of students in West Bengal’s secondary schools from 2015–2020 would reveal if there was indeed an overage bulge.  
 - **Dropout analysis**: Where exactly are students dropping out? Between Class 8–10? Or 10–12? State-level progression ratios would be illuminating.  
 - **Cross-board comparison**: Many students in urban areas take CBSE/ICSE boards instead of state boards. Are West Bengal’s numbers declining while CBSE enrollment is rising?  
@@ -134,7 +135,7 @@ This exploratory analysis raises more questions than it answers (which has been 
 
 ## Conclusion
 
-West Bengal’s ~41% decline in Class 12 exam takers from 2021 to 2025 is unprecedented among major Indian states. While the 2017 age-mandate policy provides a plausible explanation - a correction after years of overage students in the system - the sheer magnitude demands deeper investigation.  
+West Bengal’s ~37% decline in Class 12 exam takers from 2024 to 2025 is unprecedented among major Indian states. While the 2017 age-mandate policy provides a plausible explanation - a correction after years of unqualified students in the system - the sheer magnitude demands deeper investigation.  
 
 As someone from West Bengal, these numbers are both surprising and worrying. They point to deeper structural issues in educational access, retention, or migration that go beyond a single policy change. Whether this is a one-time correction or the beginning of a longer-term trend will become clearer in the years ahead.  
 
