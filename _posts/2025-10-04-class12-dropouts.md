@@ -16,14 +16,14 @@ Still, the 3 lakh number is huge. Especially when we are far from hitting below 
 Taking a look at 28 states would increase the noise more than the signal. And I don’t intend to publish a comprehensive comparative study of all the states. So, I cherry-picked a few, just to see how they’re doing:
 
 - **Tamil Nadu**: Often cited as a model state for educational outcomes. Good to have them as a benchmark.  
-- **Bihar**: Eastern Indian state, West Bengal’s neighbor. Most populous state in the east. Lowest per capita income in the country.  
+- **Bihar**: Eastern Indian state, West Bengal’s neighbor. Most populous state in the East. The lowest per capita income in the country.  
 - **Maharashtra**: Western Indian state. Highest state GDP. Mix of urban and rural demographics.  
 - **Haryana**: Northern Indian state. 7th richest in terms of per capita income.  
 - **Uttar Pradesh**: Bihar’s neighbor. 2nd most populous state overall. Similar socio-economic profile to Bihar in many ways.  
 
-This selection gives us a mix of geographical regions, economic profiles, and educational performance levels — enough to see if West Bengal’s trend is an outlier or part of a broader pattern.
+This selection gives us a mix of geographical regions, economic profiles, and educational performance levels - enough to see if West Bengal’s trend is an outlier or part of a broader pattern.
 
-Let’s have a look at the absolute numbers — and their trends.  
+Let’s have a look at the absolute numbers - and their trends.  
 
 *(Note: the numbers are quite decentralized. So I had to collate them from several sources. Directionally, this should be quite accurate.)*
 
@@ -66,15 +66,15 @@ Let’s take a look at the number of exam takers per 1,000 population:
 
 **Data Signals:**  
 
-Maharashtra maintains the highest rate throughout (around 12–13 students per 1,000 population), suggesting either better retention rates or favorable demographics. West Bengal’s rate drops dramatically from about 8 to under 5 per 1,000 population — confirming that this isn’t just a population effect, but a real decline in participation rates.  
+Maharashtra maintains the highest rate throughout (around 12–13 students per 1,000 population), suggesting either better retention rates or favorable demographics. West Bengal’s rate drops dramatically from about 8 to under 5 per 1,000 population - confirming that this isn’t just a population effect, but a real decline in participation rates.  
 
-This chart reveals interesting patterns, but comes with a caveat. This has an implicit assumption: the distribution of age groups is uniform across the states. That means if 10 eligible students in TN can appear for the class 12 exams, then for WB and others also, the number is 10. Which, obviously, is not true. But we don’t have more granular data readily available. Ideally, we should be looking at the base of 16–20 or 15–19 age cohorts. That would give us a better idea about the “eligible” group.  
+This chart reveals interesting patterns, but comes with a caveat. This has an implicit assumption: the proportion of the eligible age group (16-18 year-olds) within the total population is uniform across states. Which, obviously, is not true. States with younger populations will have proportionally more children under 10 and fewer teenagers, while states further along in demographic transition will have a higher share of the 16-18 cohort. But we don’t have more granular data readily available. At least, I couldn’t find one. Ideally, we should be looking at the base of 16-20 or 15-19 age cohorts. That would give us a better idea about the “eligible” group.
 
 ---
 
 ## Another Proxy: Youth Population Base
 
-The closest we can get to the ideal metric is the population of the 0–14 age group in 2021 - which was published by [Data for India](https://www.dataforindia.com/age-distribution-states/#:~:text=As%20of%202021%2C%20Kerala%20was,Age-groups%20in%20Indian%20states). This can serve as a reasonable proxy for the eligible age group in 2025.  
+The closest we can get to the ideal metric is the population of the 0–14 age group in 2021, which was published by [Data for India](https://www.dataforindia.com/age-distribution-states/#:~:text=As%20of%202021%2C%20Kerala%20was,Age-groups%20in%20Indian%20states). This can serve as a reasonable proxy for the eligible age group in 2025.  
 
 What if we try to see the number of students appearing per 1,000 youth?
 
@@ -84,7 +84,7 @@ What this reveals:
 
 It looks far worse for West Bengal. But this is a total guesstimation - at best. Here, ‘Youth’ is proxied by the 0–14 population share in 2021. By 2025, this group spans roughly ages 4–18. It’s not a perfect match to the Class 12 eligible cohort (≈17–18 years), but directionally it reflects the size of the feeder base.  
 
-Maharashtra leads with 58.0 students per 1,000 youth, followed by Tamil Nadu (50.0) and Uttar Pradesh (37.7). West Bengal sits at just 22.6 - barely ahead of Haryana (26.7).  
+Maharashtra leads with 58.0 students per 1,000 youth, followed by Tamil Nadu (50.0) and Uttar Pradesh (37.7). West Bengal sits at just 22.6 - trailing behind Haryana (26.7).  
 
 This stark difference (58.0 for Maharashtra vs 22.6 for West Bengal) suggests one of two things:  
 
