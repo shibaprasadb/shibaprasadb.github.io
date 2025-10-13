@@ -1,86 +1,166 @@
-# Personal Website — shibaprasadb.github.io
+# 🌐 Personal Website — shibaprasadb.github.io
 
-This repository contains the source for [shibaprasadb.github.io](https://shibaprasadb.github.io), a personal site built with [Jekyll 4](https://jekyllrb.com/). The site highlights my work in data science, captures long-form writing, and serves as a hub for newsletter subscriptions and contact information.
+[![Build and Deploy](https://github.com/shibaprasadb/shibaprasadb.github.io/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/shibaprasadb/shibaprasadb.github.io/actions)
+[![Jekyll](https://img.shields.io/badge/Jekyll-4.x-red.svg)](https://jekyllrb.com/)
+[![Ruby](https://img.shields.io/badge/Ruby-3.1-red.svg)](https://www.ruby-lang.org/)
 
-## Highlights
+> A modern, responsive personal website showcasing data science work, technical writing, and professional insights.
 
-- **Custom Jekyll theme** with a hero landing page, sticky navigation bar, dark-mode toggle, and responsive layout styles.
-- **Writing hub** powered by Markdown posts in [`_posts/`](./_posts/) with:
-  - Automatic tag archive generation via [`_plugins/tag_generator.rb`](./_plugins/tag_generator.rb).
-  - Client-side filtering on [`blog.html`](./blog.html) to browse posts by tag without leaving the page.
-  - Post layout extras such as Substack subscribe embeds and [Giscus](https://giscus.app) discussions for comments.
-- **Static pages** for About, Publications, and Subscribe, plus icons and headshots in [`images/`](./images/).
-- **Analytics ready**: GoatCounter and Umami scripts are wired in [`_layouts/default.html`](./_layouts/default.html).
-- **Continuous delivery** to GitHub Pages using the workflow in [`.github/workflows/build.yml`](./.github/workflows/build.yml).
+**🔗 Live Site:** [shibaprasadb.github.io](https://shibaprasadb.github.io)
 
-## Prerequisites
+This repository contains the source code for my personal website, built with Jekyll 4. The site serves as a digital hub for my work in data science, analytics, and AI, featuring technical blog posts, professional updates, and a platform for meaningful discussions.
 
-- Ruby 3.1 (matching [`.ruby-version`](./.ruby-version))
-- [Bundler](https://bundler.io/) for dependency management (`gem install bundler`)
+## ✨ Key Features
 
-## Local development
+### 🎨 **Modern Design**
+- Custom Jekyll theme with hero landing page
+- Sticky navigation bar with smooth scrolling
+- Dark/light mode toggle for better accessibility
+- Fully responsive layout optimized for all devices
 
-Install dependencies and run the development server:
+### 📝 **Content Management**
+- **Blog System**: Markdown-powered posts in [`_posts/`](./_posts/) with automatic tag generation
+- **Smart Filtering**: Client-side tag filtering on [`blog.html`](./blog.html) for seamless browsing
+- **Rich Interactions**: Substack newsletter integration and [Giscus](https://giscus.app) comments
+- **Static Pages**: Dedicated sections for About, Publications, and Newsletter subscription
 
+### 📊 **Analytics & Performance**
+- Integrated GoatCounter and Umami analytics
+- Optimized loading with lazy image loading
+- SEO-friendly structure and metadata
+
+### 🚀 **Deployment**
+- Automated CI/CD pipeline via GitHub Actions
+- Zero-downtime deployments to GitHub Pages
+- Custom domain support with CNAME configuration
+
+## 🛠️ Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Ruby 3.1** (version specified in [`.ruby-version`](./.ruby-version))
+- **Bundler** for dependency management
+  ```bash
+  gem install bundler
+  ```
+
+## 🚀 Quick Start
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/shibaprasadb/shibaprasadb.github.io.git
+cd shibaprasadb.github.io
+```
+
+### 2. Install dependencies
 ```bash
 bundle install
+```
+
+### 3. Start the development server
+```bash
 bundle exec jekyll serve
 ```
 
-The site will be available at <http://localhost:4000>. Jekyll supports hot-reloading, so saved changes appear after a refresh.
+🎉 **That's it!** Your site will be available at <http://localhost:4000>
 
-To build the production site locally:
+Jekyll supports hot-reloading, so any changes you make will automatically appear after a browser refresh.
 
+### 4. Build for production
 ```bash
 bundle exec jekyll build
 ```
 
-This generates the static site under `_site/`.
+This generates the static site under `_site/` directory, ready for deployment.
 
-## Adding content
+## 📝 Content Management
 
-### New posts
+### ✍️ Creating New Blog Posts
 
-1. Create a Markdown file in `_posts/` using the `YYYY-MM-DD-title.md` naming convention.
-2. Include front matter similar to:
+1. **Create a new file** in `_posts/` following the naming convention:
+   ```
+   YYYY-MM-DD-your-post-title.md
+   ```
 
+2. **Add front matter** at the top of your file:
    ```yaml
    ---
    layout: post
-   title: My New Article
-   tags: [analytics, experimentation]
+   title: "Your Awesome Post Title"
+   tags: [data-science, analytics, ai]
    ---
    ```
 
-3. Write the post in Markdown below the front matter. Use the `tags` array to enable filtering on the blog page and to generate archive pages.
+3. **Write your content** in Markdown below the front matter. The `tags` array enables:
+   - Automatic filtering on the blog page
+   - Generation of tag archive pages
+   - Better content discoverability
 
-### Static pages & navigation
+### 🎨 Customizing Pages & Navigation
 
-- Edit shared navigation links in [`_includes/nav.html`](./_includes/nav.html).
-- Update the base layout, analytics scripts, or footer in [`_layouts/default.html`](./_layouts/default.html).
-- Page-specific content (About, Publications, Subscribe, etc.) lives in the project root as HTML files.
+| Component | File Location | Purpose |
+|-----------|---------------|---------|
+| **Navigation** | [`_includes/nav.html`](./_includes/nav.html) | Edit menu links and structure |
+| **Layout** | [`_layouts/default.html`](./_layouts/default.html) | Modify base template, analytics, footer |
+| **Static Pages** | Root directory (`.html` files) | About, Publications, Subscribe content |
 
-### Images & assets
+### 🖼️ Managing Images & Assets
 
-Store images in the [`images/`](./images/) directory. Posts often use subfolders (for example, `images/posts/<post-slug>/`) to keep assets organised.
+- **Main directory**: [`images/`](./images/) for general assets
+- **Post-specific**: Use subfolders like `images/posts/<post-slug>/` for organization
+- **Optimization**: Images are lazy-loaded for better performance
 
-## Comments & subscriptions
+**Pro tip**: Keep image file sizes reasonable (< 500KB) for optimal loading times.
 
-- Post pages embed a Substack signup iframe so readers can join the **Data Signal** newsletter without leaving the site.
-- Comments are handled through Giscus; repository and category identifiers are configured in [`_includes/giscus.html`](./_includes/giscus.html). Update those values if you fork the project or want to point to a different discussion board.
+## 💬 Community Features
 
-## Deployment
+### 📧 Newsletter Integration
+- **Substack Integration**: Embedded signup forms on post pages for the **Data Signal** newsletter
+- **Seamless Experience**: Readers can subscribe without leaving the site
 
-Every push to `main` triggers the [Build and Deploy](./.github/workflows/build.yml) workflow:
+### 💭 Comments System
+- **Powered by Giscus**: GitHub-based discussion system for authentic conversations
+- **Configuration**: Update repository and category settings in [`_includes/giscus.html`](./_includes/giscus.html)
+- **Moderation**: Leverage GitHub's moderation tools and community guidelines
 
-1. Checks out the repository and sets up Ruby 3.1 with Bundler caching.
-2. Runs `bundle exec jekyll build` to produce `_site/`.
-3. Publishes the artifact to GitHub Pages using `actions/deploy-pages`.
+## 🚢 Deployment
 
-To deploy manually, you can run the same build command locally and upload the contents of `_site/` to any static hosting provider.
+### Automated Deployment
+Every push to `main` triggers the automated [Build and Deploy](./.github/workflows/build.yml) workflow:
 
-## Contact
+1. **Environment Setup**: Ruby 3.1 with Bundler caching
+2. **Build Process**: `bundle exec jekyll build` generates `_site/`
+3. **Deployment**: Publishes to GitHub Pages using `actions/deploy-pages`
 
-Questions or collaboration ideas? Reach out at [shibaprasad.b@outlook.com](mailto:shibaprasad.b@outlook.com).
+### Manual Deployment
+For other hosting providers:
+```bash
+bundle exec jekyll build
+# Upload contents of _site/ to your hosting provider
+```
 
-**This README has been generated by AI.**
+## 📊 Project Structure
+
+```
+├── _config.yml          # Jekyll configuration
+├── _includes/           # Reusable components
+├── _layouts/            # Page templates
+├── _plugins/            # Custom Jekyll plugins
+├── _posts/              # Blog posts
+├── images/              # Static assets
+├── .github/workflows/   # CI/CD configuration
+└── *.html              # Static pages
+```
+
+## 📬 Contact
+
+**Shibaprasad Bhattacharya**  
+📧 [shibaprasad.b@outlook.com](mailto:shibaprasad.b@outlook.com)  
+🌐 [shibaprasadb.github.io](https://shibaprasadb.github.io)
+
+---
+
+<div align="center">
+  <p><em>Built with ❤️ using Jekyll and GitHub Pages</em></p>
+  <p><sub>This README was enhanced with AI assistance</sub></p>
+</div>
