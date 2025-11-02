@@ -1,166 +1,166 @@
-# 🌐 Personal Website — shibaprasadb.github.io
+# shibaprasadb.github.io
 
-[![Build and Deploy](https://github.com/shibaprasadb/shibaprasadb.github.io/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/shibaprasadb/shibaprasadb.github.io/actions)
-[![Jekyll](https://img.shields.io/badge/Jekyll-4.x-red.svg)](https://jekyllrb.com/)
-[![Ruby](https://img.shields.io/badge/Ruby-3.1-red.svg)](https://www.ruby-lang.org/)
+Personal website and blog for Shibaprasad Bhattacharya, built with Jekyll and hosted on GitHub Pages.
 
-> A modern, responsive personal website showcasing data science work, technical writing, and professional insights.
+**Live Site:** https://shibaprasadb.github.io
 
-**🔗 Live Site:** [shibaprasadb.github.io](https://shibaprasadb.github.io)
+## Overview
 
-This repository contains the source code for my personal website, built with Jekyll 4. The site serves as a digital hub for my work in data science, analytics, and AI, featuring technical blog posts, professional updates, and a platform for meaningful discussions.
+A minimal, responsive personal website featuring technical writing on analytics, product strategy, and data science. The site uses Jekyll's static site generation with custom layouts, a tag-based filtering system, and automated deployment through GitHub Actions.
 
-## ✨ Key Features
+## Tech Stack
 
-### 🎨 **Modern Design**
-- Custom Jekyll theme with hero landing page
-- Sticky navigation bar with smooth scrolling
-- Dark/light mode toggle for better accessibility
-- Fully responsive layout optimized for all devices
+- **Static Site Generator:** Jekyll 4.3
+- **Deployment:** GitHub Pages via GitHub Actions
+- **Comments:** Giscus (GitHub Discussions)
+- **Analytics:** GoatCounter, Umami
+- **Newsletter:** Substack integration
 
-### 📝 **Content Management**
-- **Blog System**: Markdown-powered posts in [`_posts/`](./_posts/) with automatic tag generation
-- **Smart Filtering**: Client-side tag filtering on [`blog.html`](./blog.html) for seamless browsing
-- **Rich Interactions**: Substack newsletter integration and [Giscus](https://giscus.app) comments
-- **Static Pages**: Dedicated sections for About, Publications, and Newsletter subscription
+## Local Development
 
-### 📊 **Analytics & Performance**
-- Integrated GoatCounter and Umami analytics
-- Optimized loading with lazy image loading
-- SEO-friendly structure and metadata
+### Prerequisites
 
-### 🚀 **Deployment**
-- Automated CI/CD pipeline via GitHub Actions
-- Zero-downtime deployments to GitHub Pages
-- Custom domain support with CNAME configuration
+- Ruby 3.1+ (see `.ruby-version`)
+- Bundler (`gem install bundler`)
 
-## 🛠️ Prerequisites
+### Setup
 
-Before you begin, ensure you have the following installed:
-
-- **Ruby 3.1** (version specified in [`.ruby-version`](./.ruby-version))
-- **Bundler** for dependency management
-  ```bash
-  gem install bundler
-  ```
-
-## 🚀 Quick Start
-
-### 1. Clone the repository
 ```bash
+# Clone repository
 git clone https://github.com/shibaprasadb/shibaprasadb.github.io.git
 cd shibaprasadb.github.io
-```
 
-### 2. Install dependencies
-```bash
+# Install dependencies
 bundle install
-```
 
-### 3. Start the development server
-```bash
+# Start development server
 bundle exec jekyll serve
 ```
 
-🎉 **That's it!** Your site will be available at <http://localhost:4000>
+The site will be available at `http://localhost:4000` with automatic reload on file changes.
 
-Jekyll supports hot-reloading, so any changes you make will automatically appear after a browser refresh.
+### Build for Production
 
-### 4. Build for production
 ```bash
 bundle exec jekyll build
 ```
 
-This generates the static site under `_site/` directory, ready for deployment.
+Output will be in the `_site/` directory.
 
-## 📝 Content Management
+## Project Structure
 
-### ✍️ Creating New Blog Posts
+```
+.
+├── _config.yml              # Jekyll configuration
+├── _includes/               # Reusable components (nav, comments, post lists)
+├── _layouts/                # Page templates (default, post, tag)
+├── _plugins/                # Custom plugins (tag page generator)
+├── _posts/                  # Blog posts (YYYY-MM-DD-title.md format)
+├── images/                  # Static assets
+├── .github/workflows/       # CI/CD pipeline
+└── *.html                   # Static pages (index, blog, publications, subscribe)
+```
 
-1. **Create a new file** in `_posts/` following the naming convention:
+## Writing Content
+
+### Creating a Blog Post
+
+1. Create a new file in `_posts/` with the naming convention:
    ```
-   YYYY-MM-DD-your-post-title.md
+   YYYY-MM-DD-post-title.md
    ```
 
-2. **Add front matter** at the top of your file:
+2. Add front matter:
    ```yaml
    ---
    layout: post
-   title: "Your Awesome Post Title"
-   tags: [data-science, analytics, ai]
+   title: "Your Post Title"
+   tags: [tag1, tag2, tag3]
    ---
    ```
 
-3. **Write your content** in Markdown below the front matter. The `tags` array enables:
-   - Automatic filtering on the blog page
-   - Generation of tag archive pages
-   - Better content discoverability
+3. Write content in Markdown below the front matter.
 
-### 🎨 Customizing Pages & Navigation
+Tags enable automatic filtering on the blog page and generate individual tag archive pages via the custom plugin in `_plugins/tag_generator.rb`.
 
-| Component | File Location | Purpose |
-|-----------|---------------|---------|
-| **Navigation** | [`_includes/nav.html`](./_includes/nav.html) | Edit menu links and structure |
-| **Layout** | [`_layouts/default.html`](./_layouts/default.html) | Modify base template, analytics, footer |
-| **Static Pages** | Root directory (`.html` files) | About, Publications, Subscribe content |
+### Editing Navigation
 
-### 🖼️ Managing Images & Assets
+Update `_includes/nav.html` to modify the navigation menu.
 
-- **Main directory**: [`images/`](./images/) for general assets
-- **Post-specific**: Use subfolders like `images/posts/<post-slug>/` for organization
-- **Optimization**: Images are lazy-loaded for better performance
+### Customizing Layouts
 
-**Pro tip**: Keep image file sizes reasonable (< 500KB) for optimal loading times.
+- **Base template:** `_layouts/default.html`
+- **Post template:** `_layouts/post.html`
+- **Tag archive:** `_layouts/tag.html`
 
-## 💬 Community Features
+## Features
 
-### 📧 Newsletter Integration
-- **Substack Integration**: Embedded signup forms on post pages for the **Data Signal** newsletter
-- **Seamless Experience**: Readers can subscribe without leaving the site
+### Tag-Based Filtering
 
-### 💭 Comments System
-- **Powered by Giscus**: GitHub-based discussion system for authentic conversations
-- **Configuration**: Update repository and category settings in [`_includes/giscus.html`](./_includes/giscus.html)
-- **Moderation**: Leverage GitHub's moderation tools and community guidelines
+The blog page (`blog.html`) implements client-side tag filtering using vanilla JavaScript. The tag generator plugin automatically creates archive pages for each tag used in posts.
 
-## 🚢 Deployment
+### Comments System
 
-### Automated Deployment
-Every push to `main` triggers the automated [Build and Deploy](./.github/workflows/build.yml) workflow:
+Blog posts include Giscus-powered comments. Configure in `_includes/giscus.html`:
+- Repository
+- Discussion category
+- Theme settings
 
-1. **Environment Setup**: Ruby 3.1 with Bundler caching
-2. **Build Process**: `bundle exec jekyll build` generates `_site/`
-3. **Deployment**: Publishes to GitHub Pages using `actions/deploy-pages`
+### Newsletter Integration
+
+Substack newsletter signup forms are embedded on post pages and the dedicated subscribe page (`subscribe.html`).
+
+### Analytics
+
+Two analytics platforms are integrated:
+- GoatCounter for privacy-focused metrics
+- Umami for detailed analytics
+
+Configuration is in `_layouts/default.html`.
+
+## Deployment
+
+### Automated (Recommended)
+
+Every push to the `main` branch triggers the GitHub Actions workflow (`.github/workflows/build.yml`):
+
+1. Sets up Ruby environment with dependency caching
+2. Runs `bundle exec jekyll build`
+3. Deploys to GitHub Pages
 
 ### Manual Deployment
-For other hosting providers:
+
+For alternative hosting:
+
 ```bash
 bundle exec jekyll build
-# Upload contents of _site/ to your hosting provider
+# Upload _site/ contents to your hosting provider
 ```
 
-## 📊 Project Structure
+## Configuration
 
-```
-├── _config.yml          # Jekyll configuration
-├── _includes/           # Reusable components
-├── _layouts/            # Page templates
-├── _plugins/            # Custom Jekyll plugins
-├── _posts/              # Blog posts
-├── images/              # Static assets
-├── .github/workflows/   # CI/CD configuration
-└── *.html              # Static pages
+Key settings in `_config.yml`:
+
+```yaml
+title: Shibaprasad Bhattacharya
+baseurl: ""
+url: "https://shibaprasadb.github.io"
+future: true  # Allows posts with future dates
 ```
 
-## 📬 Contact
+## Dependencies
 
-**Shibaprasad Bhattacharya**  
-📧 [shibaprasad.b@outlook.com](mailto:shibaprasad.b@outlook.com)  
-🌐 [shibaprasadb.github.io](https://shibaprasadb.github.io)
+Managed via Bundler (see `Gemfile`):
 
----
+- `jekyll ~> 4.3` - Core static site generator
+- `webrick ~> 1.7` - Required for Ruby 3.0+ when running `jekyll serve`
 
-<div align="center">
-  <p><em>Built with ❤️ using Jekyll and GitHub Pages</em></p>
-  <p><sub>This README was enhanced with AI assistance</sub></p>
-</div>
+## License
+
+This repository contains personal content and code. Feel free to reference the code structure for your own projects.
+
+## Contact
+
+**Shibaprasad Bhattacharya**
+Email: shibaprasad.b@outlook.com
+Website: https://shibaprasadb.github.io
