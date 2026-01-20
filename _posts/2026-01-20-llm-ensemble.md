@@ -37,7 +37,7 @@ With ensemble, it becomes: What's the probability of at least one success?
 
 The math changes drastically:
 
-**P(correct) = 1 - P(all calls wrong)**
+**P(at least one correct) = 1 - P(all calls wrong)**
 
 For n=3 calls with p=0.75 success rate:
 - P(all wrong) = (1-p)ⁿ = 0.25³ = 0.015625
