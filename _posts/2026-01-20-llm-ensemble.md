@@ -79,12 +79,12 @@ The key is understanding *how* your model fails, not just *that* it fails. Direc
 
 If you don't understand your failure mode, you're just burning money on redundant calls.
 
-(Now that I think about it, we can dedicate a separate blogpost on designing Eval functions)
+(Now that I think about it, we can dedicate a separate blog post on designing Eval functions)
 
 ## The Takeaway
 
 Sometimes the best solution isn't a better prompt or a bigger model. It's understanding your failure mode and exploiting it mathematically.
 
-A single API call gave me 75% accuracy. Four calls with a simple Max() aggregator got me to 99.6%. Same model, same prompt. Just smarter approach.
+A single API call gave me 75% accuracy. Four calls with a simple Max() aggregator got me to 99.6%. Same model, same prompt. Just a smarter approach.
 
-The real lesson? When you can't improve the model's performance, improve how you use it. In an constrained space, solving a problem becomes more interesting.
+The real lesson? When you can't improve the model's performance, improve how you use it. In a constrained space, solving a problem becomes more interesting.
