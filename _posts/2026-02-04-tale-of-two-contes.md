@@ -111,3 +111,7 @@ While all three managers show some performance difference between competitions (
 
 
 The "Tale of Two Contes" is a real, quantifiable pattern that has persisted across 50 Champions League matches and 618 league games. Whether it's tactical inflexibility in knockout rounds, squad depth issues, or something else entirely - the numbers make one thing clear: domestic dominance doesn't automatically translate to European success. 
+
+---
+
+Link to the notebook: https://github.com/shibaprasadb/datasignal/blob/main/conte_record/conte_record.ipynb
