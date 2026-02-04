@@ -2,7 +2,7 @@
 title: "The Tale of Two Contes"
 tags: ["data-stories"]
 date: 2026-01-20
-image: 
+image: https://shibaprasadb.github.io/images/posts/2026-02-04-tale-of-two-contes/gap_distribution_chart.png
 ---
 
 Antonio Conte has just finished his 2025/26 Champions League run with Napoli, and yet again, the "Scudetto King" looked like a "European Novice." For those who follow football, it's well known that he has an illustrious record when it comes to league matches, but falls short when it comes to Europe. Or at least there is a strong belief among many that he falls short.
