@@ -15,6 +15,7 @@ A minimal, responsive personal website featuring technical writing on analytics,
 - **Comments:** Giscus (GitHub Discussions)
 - **Analytics:** GoatCounter, Umami
 - **Newsletter:** Substack integration
+- **RSS/Atom Feed:** Jekyll Feed plugin (`/feed.xml`)
 
 ## Local Development
 
@@ -154,6 +155,7 @@ Managed via Bundler (see `Gemfile`):
 
 - `jekyll ~> 4.3` - Core static site generator
 - `webrick ~> 1.7` - Required for Ruby 3.0+ when running `jekyll serve`
+- `jekyll-feed ~> 0.17` - Generates RSS/Atom feed at `feed.xml`
 
 ## License
 
