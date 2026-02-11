@@ -1,7 +1,7 @@
 ---
 title: "The Tale of Two Contes"
 tags: ["data-stories"]
-date: 2026-01-20
+date: 2026-02-04
 image: https://shibaprasadb.github.io/images/posts/2026-02-04-tale-of-two-contes/gap_distribution_chart.png
 ---
 
