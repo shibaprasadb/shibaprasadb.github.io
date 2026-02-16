@@ -1,10 +1,10 @@
 {% assign posts = include.posts %}
-{% assign list_classes = 'post-list' %}
+{% assign list_classes = 'post-list post-card-grid' %}
 {% if include.list_class %}
   {% assign list_classes = list_classes | append: ' ' | append: include.list_class %}
 {% endif %}
 {% if posts and posts != empty %}
-<ul class="{{ list_classes }}"{% if include.list_id %} id="{{ include.list_id }}"{% endif %}>
+<div class="{{ list_classes }}"{% if include.list_id %} id="{{ include.list_id }}"{% endif %}>
   {% for post in posts %}
     {% assign tag_slugs = '' %}
     {% if post.tags %}
@@ -16,12 +16,26 @@
         {% assign tag_slugs = tag_slugs | append: tag_slug %}
       {% endfor %}
     {% endif %}
-    <li class="post-item" data-tags="{{ tag_slugs }}">
-      <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
-    </li>
+    {% assign primary_tag = post.tags | first %}
+    {% assign primary_tag_slug = primary_tag | slugify %}
+    <article class="post-item post-card" data-tags="{{ tag_slugs }}">
+      {% if primary_tag %}
+        <span class="post-card-tag tag-{{ primary_tag_slug }}">{{ primary_tag }}</span>
+      {% endif %}
+      <h3 class="post-card-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+      <span class="post-card-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+      <p class="post-card-excerpt">
+        {% if post.description %}
+          {{ post.description }}
+        {% else %}
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        {% endif %}
+      </p>
+    </article>
   {% endfor %}
-</ul>
+</div>
 {% else %}
   <p class="no-posts">{{ include.empty_message | default: 'No posts found.' }}</p>
 {% endif %}

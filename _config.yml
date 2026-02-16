@@ -6,5 +6,7 @@ future: true
 plugins:
   - jekyll-feed
 
+excerpt_separator: <!--more-->
+
 feed:
   path: feed.xml
