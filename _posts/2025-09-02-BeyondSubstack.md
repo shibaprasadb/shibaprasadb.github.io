@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why I’m Cross-Posting Beyond Substack
-tags: [reflections]
+tags: ["reflections"]
 ---
 I have been using Substack for some time now.  
 
