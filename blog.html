@@ -6,7 +6,6 @@ title: Blog
     <div class="blog-wrapper">
         <div class="blog-posts">
             <h2 id="posts-heading">Posts</h2>
-            <p><a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></p>
             {% include post-list.html posts=site.posts list_id='blog-post-list' %}
             <p class="no-posts" id="no-posts-message" hidden>No posts found for this category yet.</p>
         </div>
