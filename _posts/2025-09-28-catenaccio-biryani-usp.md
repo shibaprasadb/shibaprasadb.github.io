@@ -2,6 +2,7 @@
 layout: post
 title: "The Trap of Copying the USP"
 tags: [product, strategy]
+description: "Catenaccio, Kolkata biryani, and why copying someone's best feature rarely works."
 ---
 
 My current organization has a hybrid setup. That means I need to be in the office a few days a week and work from home for the rest.
