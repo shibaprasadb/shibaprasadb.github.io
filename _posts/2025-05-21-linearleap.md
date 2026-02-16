@@ -1,7 +1,7 @@
 ---
 title: "LinearLeap: Towards More Intelligent Machine Learning Tools"
 date: 2025-05-21
-tags: ["data-science"]
+tags: ["technical"]
 ---
 
 Upload data, run regression, get recommendations - powered by LLMs and built with analysts in mind.
