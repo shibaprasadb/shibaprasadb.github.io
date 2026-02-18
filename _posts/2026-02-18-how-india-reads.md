@@ -99,22 +99,22 @@ The plot uses the mean of each range as the representative value.
 
 **Citations**
 
-[1] [Grand View Research/Horizon Databook. India Books Market Size & Outlook, 2025–2033.] (https://www.grandviewresearch.com/horizon/outlook/books-market/india)
+[1] Grand View Research/Horizon Databook. India Books Market Size & Outlook, 2025–2033. https://www.grandviewresearch.com/horizon/outlook/books-market/india
 
-[2] [IBEF. India's Meteoric Rise as a Publishing Hub.] (https://www.ibef.org/blogs/india-s-meteoric-rise-as-a-publishing-hub)
+[2] IBEF. India's Meteoric Rise as a Publishing Hub. https://www.ibef.org/blogs/india-s-meteoric-rise-as-a-publishing-hub
 
-[3] [Grand View Research/Horizon Databook. US Books Market Size & Outlook, 2025–2033.] (https://www.grandviewresearch.com/horizon/outlook/books-market/united-states)
+[3] Grand View Research/Horizon Databook. US Books Market Size & Outlook, 2025–2033. https://www.grandviewresearch.com/horizon/outlook/books-market/united-states
 
-[4] [AAP via Publishing Perspectives. December StatShot: US Book Market Up 6.5% Year-to-Date.] (https://publishingperspectives.com/2025/03/aaps-december-statshot-us-market-up-6-5-percent-year-to-date/)
+[4] AAP via Publishing Perspectives. December StatShot: US Book Market Up 6.5% Year-to-Date. https://publishingperspectives.com/2025/03/aaps-december-statshot-us-market-up-6-5-percent-year-to-date/
 
-[5] [Nielsen BookData. Bestsellers & trends in the UK & Ireland in 2024.] (https://nielseniq.com/global/en/insights/commentary/2025/bestsellers-trends-in-the-uk-ireland-in-2024/)
+[5] Nielsen BookData. Bestsellers & trends in the UK & Ireland in 2024. https://nielseniq.com/global/en/insights/commentary/2025/bestsellers-trends-in-the-uk-ireland-in-2024/
 
-[6] [Friedman, Jane. Book sales update: UK market.] (https://janefriedman.com/book-sales-update-uk-market/)
+[6] Friedman, Jane. Book sales update: UK market. https://janefriedman.com/book-sales-update-uk-market/
 
-[7] [LoveReading. Fiction Book Sales in 2024 Top The Lot.] (https://www.lovereading.co.uk/blog/fiction-book-sales-in-2024-top-the-lot-while-non-fiction-lags-behind-9226)
+[7] LoveReading. Fiction Book Sales in 2024 Top The Lot. https://www.lovereading.co.uk/blog/fiction-book-sales-in-2024-top-the-lot-while-non-fiction-lags-behind-9226
 
-[8] [Grand View Research/Horizon Databook. UK Books Market Size & Outlook, 2025–2033.] (https://www.grandviewresearch.com/horizon/outlook/books-market/uk)
+[8] Grand View Research/Horizon Databook. UK Books Market Size & Outlook, 2025–2033. https://www.grandviewresearch.com/horizon/outlook/books-market/uk
 
-[9] [Federation of European Publishers (FEP). European Book Publishing Statistics 2024.] (https://www.fep-fee.eu/European-Book-Publishing-Statistics-2024)
+[9] Federation of European Publishers (FEP). European Book Publishing Statistics 2024. https://www.fep-fee.eu/European-Book-Publishing-Statistics-2024
 
-[10] [Grand View Research/Horizon Databook. Europe Books Market Size & Outlook, 2025–2033.] (https://www.grandviewresearch.com/horizon/outlook/books-market/europe)
+[10] Grand View Research/Horizon Databook. Europe Books Market Size & Outlook, 2025–2033. https://www.grandviewresearch.com/horizon/outlook/books-market/europe
