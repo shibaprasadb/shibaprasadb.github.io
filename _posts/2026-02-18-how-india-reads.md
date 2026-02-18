@@ -44,6 +44,7 @@ One methodological note: this analysis uses nominal GDP per capita as the denomi
 As usual, reality is far from a clean black-and-white thing. It is much more nuanced. On average, Indians tend to read more for utility, but we also tend to spend more on non-utility books.
 
 This also raises an interesting question: what happens when India’s per capita GDP rises? More surplus should lead to more spending on pleasure?
+
 ---
 
 ### Notes & Sources
@@ -98,7 +99,7 @@ The plot uses the mean of each range as the representative value.
 
 **Citations**
 
-[1] Grand View Research/Horizon Databook. India Books Market Size & Outlook, 2025–2033. https://www.grandviewresearch.com/horizon/outlook/books-market/india
+[1] Grand View Research/Horizon Databook. India Books Market Size & Outlook, 2025–2033. [https://www.grandviewresearch.com/horizon/outlook/books-market/india]
 
 [2] IBEF. India's Meteoric Rise as a Publishing Hub. https://www.ibef.org/blogs/india-s-meteoric-rise-as-a-publishing-hub
 
