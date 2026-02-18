@@ -12,7 +12,7 @@ I related a lot to the essay by Anurag Verma. He argued that most of our reading
 
 Among all these debates and discussions, I felt we were missing one point: how is India different from other nations?
 
-I don't have a lot of foreign associates. But from the little I have accumulated, it didn't feel like others were drowning themselves in books while India alone wasn't reading. It is a contemporary issue that transcends borders, regions and seas.
+I don't have a lot of foreign associates. But from the little knowledge, it didn't feel like others were drowning themselves in books while India alone wasn't reading. It is a contemporary issue that transcends borders, regions and seas.
 
 So the question arose:
 
@@ -37,7 +37,7 @@ But now, let's look at it from another angle: as a percentage of GDP, how much a
 
 An average Indian is actually spending more on trade books than an average US and European citizen. But less than the UK.
 
-This shows that when it comes to buying non-educational books, Indians are more intentional compared to more developed nations. Because when you are spending more of your hard earned money, inspite of being a poorer country per-capita GDP wise, you need to be more intentional.
+This shows that when it comes to buying non-educational books, Indians are more intentional compared to more developed nations. When you are spending more of your hard-earned money, especially in a country with a lower per-capita GDP, you need to be more intentional.
 
 One methodological note: this analysis uses nominal GDP per capita as the denominator. Book prices vary across markets. A $10 US paperback might be ₹400-600 in India, depending on the publisher and format - but books are globally traded goods with some price convergence, unlike purely local services. Using nominal figures keeps the comparison straightforward, though a full [PPP adjustment](https://en.wikipedia.org/wiki/Purchasing_power_parity) could be explored in future work.
 
