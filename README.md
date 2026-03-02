@@ -109,7 +109,7 @@ Blog posts include Giscus-powered comments. Configure in `_includes/giscus.html`
 
 ### Newsletter Integration
 
-Substack newsletter signup forms are embedded on post pages and the dedicated subscribe page (`subscribe.html`).
+Substack newsletter (Data Signal) signup forms are embedded on post pages and the dedicated subscribe page (`subscribe.html`).
 
 ### Analytics
 
