@@ -226,6 +226,7 @@ nav .nav-icon:hover {
 .hero-motto {
   margin-top: 12px;
   font-style: italic;
+  font-weight: 400;
   font-size: 17px;
   color: var(--color-text-secondary);
 }
@@ -437,7 +438,13 @@ nav .nav-icon:hover {
 }
 
 .category-list li > a {
-  font-style: italic;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.category-count {
+  font-style: normal;
+  font-weight: 400;
 }
 
 .category-list a.active {
