@@ -1,18 +1,18 @@
-/* Typography - Inter from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+/* Typography - Lora from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 /* ============================================
    CSS Variables - Editorial Clean Theme
    ============================================ */
 :root {
-  --color-bg: #FFFFFF;
+  --color-bg: #fcfcfc;
   --color-text-primary: #1a1a1a;
   --color-text-secondary: #666666;
   --color-accent: #0f766e;
-  --color-border: #e5e5e5;
+  --color-border: #e0e0e0;
   --color-footer-bg: #FAFAFA;
 
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family: 'Lora', Georgia, 'Times New Roman', serif;
 
   --nav-height: 64px;
   --container-max: 1200px;
@@ -30,7 +30,7 @@
 body {
   font-family: var(--font-family);
   margin: 0;
-  line-height: 1.65;
+  line-height: 1.75;
   background: var(--color-bg);
   color: var(--color-text-primary);
   font-size: 18px;
@@ -117,7 +117,8 @@ nav {
 
 .nav-brand {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--color-text-primary);
   text-decoration: none;
 }
@@ -136,6 +137,8 @@ nav {
 .nav-links a {
   font-size: 15px;
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--color-text-primary);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -321,7 +324,7 @@ nav .nav-icon:hover {
 .post-card-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 26px;
   padding-left: 0;
 }
 
@@ -360,8 +363,8 @@ nav .nav-icon:hover {
 
 .post-card-title {
   font-size: 20px;
-  font-weight: 600;
-  line-height: 1.3;
+  font-weight: 700;
+  line-height: 1.2;
   margin: 0 0 6px 0;
 }
 
@@ -382,15 +385,17 @@ nav .nav-icon:hover {
 .post-card-date {
   display: block;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
+  font-style: italic;
   color: var(--color-text-secondary);
   margin-bottom: 10px;
 }
 
 .post-card-excerpt {
   font-size: 15px;
+  font-weight: 400;
   line-height: 1.6;
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   margin: 0;
 }
 
@@ -408,6 +413,17 @@ nav .nav-icon:hover {
   padding-left: 20px;
 }
 
+.blog-posts > h2 {
+  font-weight: 600;
+  font-size: clamp(30px, 4vw, 36px);
+}
+
+.blog-categories h3 {
+  font-weight: 700;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 8px;
+}
+
 .category-list {
   list-style: none;
   padding-left: 0;
@@ -417,6 +433,11 @@ nav .nav-icon:hover {
 .category-list li {
   display: block;
   margin: 0 0 10px 0;
+  font-style: normal;
+}
+
+.category-list li > a {
+  font-style: italic;
 }
 
 .category-list a.active {
@@ -471,6 +492,31 @@ img {
 /* Cap width for blog post images */
 .container img:not(.hero-photo):not(.headshot) {
   max-width: 700px;
+}
+
+.post-date {
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+blockquote {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.08em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.post-card-tag,
+.post-tags .tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* ============================================
