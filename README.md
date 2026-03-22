@@ -14,7 +14,7 @@ A minimal, responsive personal website featuring technical writing on analytics,
 - **Deployment:** GitHub Pages via GitHub Actions
 - **Comments:** Giscus (GitHub Discussions)
 - **Analytics:** GoatCounter, Umami
-- **Newsletter:** Substack integration
+- **Newsletter:** Beehiiv integration
 - **RSS/Atom Feed:** Jekyll Feed plugin (`/feed.xml`)
 
 ## Local Development
