@@ -1,5 +1,5 @@
 ---
-title: "Reading the Numbers: How India Reads"
+title: "GenAI in Product : Means & Ends"
 tags: ["technical"]
 date: 2026-03-25
 description: "The productivity debate has a blind spot. Not all gains are the same."
