@@ -11,3 +11,5 @@ A four-part data series examining West Bengal through numbers. Each piece is sta
 - [West Bengal's Economy: Large by Size, Thin by Structure](https://ordinaryanalysis.substack.com/p/west-bengal-economy-large-by-size-thin-by-structure)
 - [Health Outcomes](https://ordinaryanalysis.substack.com/p/west-bengal-solved-healthcare-access)
 - [Welfare Worked. Wealth Didn't Follow.](https://ordinaryanalysis.substack.com/p/west-bengal-welfare-worked-wealth)
+
+[The synthesis](https://ordinaryanalysis.substack.com/p/west-bengal-built-the-floor-not-the) contains personal opinions and a summary of the patterns observed across 4 parts.
