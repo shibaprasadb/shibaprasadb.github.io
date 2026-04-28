@@ -7,7 +7,7 @@ layout: default
   {% if page.tags %}
   <p class="post-tags">
     {% for tag in page.tags %}
-      <a class="tag" href="/tags/{{ tag | slugify }}/">{{ tag }}</a>
+      <a class="tag" href="{{ '/blog.html' | relative_url }}?tag={{ tag | slugify | uri_escape }}">{{ tag }}</a>
     {% endfor %}
   </p>
   {% endif %}
