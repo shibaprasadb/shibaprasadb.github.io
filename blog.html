@@ -11,7 +11,7 @@ title: Blog
       {% assign tag_name = tag[0] %}
       {% assign tag_slug = tag_name | slugify %}
       <a class="filter-link"
-         href="{{ '/blog.html?tag=' | append: tag_slug | relative_url }}"
+         href="{{ '/blog.html' | relative_url }}?tag={{ tag_slug | uri_escape }}"
          data-tag-name="{{ tag_name }}"
          data-tag-slug="{{ tag_slug }}">
         {{ tag_name }}
@@ -55,7 +55,12 @@ title: Blog
     const filterLinks = Array.from(document.querySelectorAll('.filter-link'));
 
     function normalizeTag(value) {
-      return (value || '').trim().toLowerCase();
+      return (value || '')
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/[\s_]+/g, '-')
+        .replace(/-+/g, '-');
     }
 
     function getRowTags(row) {
