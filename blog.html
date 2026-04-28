@@ -54,20 +54,37 @@ title: Blog
     const postRows = Array.from(postsList.querySelectorAll('.post-row'));
     const filterLinks = Array.from(document.querySelectorAll('.filter-link'));
 
+    function normalizeTag(value) {
+      return (value || '').trim().toLowerCase();
+    }
+
+    function getRowTags(row) {
+      if (!row.dataset.tags) {
+        return [];
+      }
+
+      return row.dataset.tags
+        .split(',')
+        .map(function (tag) { return normalizeTag(tag); })
+        .filter(Boolean);
+    }
+
     function setActiveFilter(tagSlug) {
+      const normalizedTag = normalizeTag(tagSlug);
       filterLinks.forEach(function (link) {
-        const isActive = (link.dataset.tagSlug || '') === (tagSlug || '');
+        const isActive = normalizeTag(link.dataset.tagSlug || '') === normalizedTag;
         link.classList.toggle('active', isActive);
       });
     }
 
     function updatePostsForTag(tagSlug, options) {
       const config = options || {};
+      const normalizedTag = normalizeTag(tagSlug);
       let visibleCount = 0;
 
       postRows.forEach(function (row) {
-        const tags = row.dataset.tags ? row.dataset.tags.split(',') : [];
-        const shouldShow = !tagSlug || tags.includes(tagSlug);
+        const tags = getRowTags(row);
+        const shouldShow = !normalizedTag || tags.includes(normalizedTag);
         row.hidden = !shouldShow;
 
         if (shouldShow) {
@@ -79,12 +96,12 @@ title: Blog
         noPostsMessage.hidden = visibleCount !== 0;
       }
 
-      setActiveFilter(tagSlug);
+      setActiveFilter(normalizedTag);
 
       if (!config.skipHistoryUpdate) {
         const url = new URL(window.location.href);
-        if (tagSlug) {
-          url.searchParams.set('tag', tagSlug);
+        if (normalizedTag) {
+          url.searchParams.set('tag', normalizedTag);
         } else {
           url.searchParams.delete('tag');
         }
@@ -95,7 +112,8 @@ title: Blog
     filterLinks.forEach(function (link) {
       link.addEventListener('click', function (event) {
         event.preventDefault();
-        updatePostsForTag(link.dataset.tagSlug || '');
+        const linkTag = link.dataset.tagSlug || link.dataset.tagName || '';
+        updatePostsForTag(linkTag);
       });
     });
 
