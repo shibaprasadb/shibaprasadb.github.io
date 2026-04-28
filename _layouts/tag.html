@@ -1,8 +1,18 @@
 ---
 layout: default
 ---
-<div class="container">
+<div class="container blog-container">
   <h2>Posts tagged "{{ page.tag }}"</h2>
   {% assign tag_posts = site.tags[page.tag] %}
-  {% include post-list.html posts=tag_posts %}
+
+  <div class="post-list">
+    {% for post in tag_posts %}
+      <article class="post-row">
+        <time class="post-row-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <h3 class="post-row-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+      </article>
+    {% endfor %}
+  </div>
 </div>
