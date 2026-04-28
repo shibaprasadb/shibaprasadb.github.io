@@ -379,6 +379,10 @@ nav .nav-icon:hover {
   border-bottom: 1px solid var(--color-border);
 }
 
+.post-row[hidden] {
+  display: none;
+}
+
 .post-row:first-child {
   border-top: 1px solid var(--color-border);
 }
