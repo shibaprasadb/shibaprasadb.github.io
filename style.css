@@ -396,9 +396,10 @@ nav .nav-icon:hover {
 }
 
 .post-row-title {
-  font-size: clamp(24px, 2.4vw, 30px);
+  font-size: 17px;
+  font-weight: 600;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 .post-row-title a {
@@ -615,9 +616,6 @@ body.dark-mode .tag-reflections    { background: #581c87; color: #e9d5ff; }
     font-size: 16px;
   }
 
-  .post-row-title {
-    font-size: clamp(22px, 6.8vw, 28px);
-  }
 }
 
 /* Small mobile */
