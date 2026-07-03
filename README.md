@@ -164,5 +164,5 @@ This repository contains personal content and code. Feel free to reference the c
 ## Contact
 
 **Shibaprasad Bhattacharya**
-Email: shibaprasad@tuta.io
+Email: shibaprasad.b@outlook.com
 Website: https://shibaprasadb.github.io
