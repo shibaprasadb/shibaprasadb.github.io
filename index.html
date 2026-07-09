@@ -1,44 +1,70 @@
 ---
 layout: default
 title: Shibaprasad Bhattacharya
+description: "Product & strategic analytics. Decision intelligence."
 ---
-<header class="hero">
-  <div class="hero-inner">
-    <img src="images/headshot.jpg" alt="Shibaprasad Bhattacharya" class="hero-photo">
-    <h1>Shibaprasad Bhattacharya</h1>
-    <p class="hero-sub">
-      Product & Strategic Analytics | Decision Intelligence
-    </p>
-    <p class="hero-motto">
-      Building decision systems that move the bottom line.
-    </p>
-    <div class="hero-intro">
-      <p>I build decision systems where the output is measured in dollars, time, or decisions changed, not in F1 scores. My work sits at the intersection of analytics, operations research, and product strategy. I've worked across logistics, aviation, and pharma R&D, always asking: what's the business problem we're actually solving? The math is a tool, not the goal.</p>
-      <p>Currently: Sanofi (Digital R&D). Previously: Bristol Myers Squibb, Air India, Delhivery.</p>
+<div class="home-wrap">
+
+  <section id="intro">
+    <p>I build decision systems — the kind measured in dollars, hours, or decisions changed, not F1 scores. My work sits where analytics, operations research, and product strategy meet, across logistics, aviation, and pharma R&amp;D. The math is a tool; framing the problem right is the actual job.</p>
+    <p>I do my best work on messy, ambiguous problems — the ones where the hard part is figuring out what question to ask.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section id="now">
+    <span class="label">Now</span>
+    <p class="now-line"><span class="dot" aria-hidden="true"></span> Senior Analytics Specialist at Sanofi, Hyderabad — building a forecasting proof-of-concept for clinical trial supply chains.</p>
+  </section>
+
+  <hr class="rule">
+
+  <section id="writing">
+    <span class="label">Recent writing</span>
+    {% for post in site.posts limit:3 %}
+    <div class="entry">
+      <span class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
+      <span class="fill"></span>
+      <span class="meta mono">{{ post.date | date: "%b %Y" }}</span>
     </div>
-  </div>
-</header>
+    {% endfor %}
+  </section>
 
-<div class="container about">
-  <div class="section">
-    <p>I do my best work on messy, ambiguous business problems - the kind where you're not sure what question to ask, let alone how to answer it. Framing the problem right is usually harder (and more important) than building the perfect model.</p>
+  <hr class="rule">
 
-    <p>I believe analytics creates real value when it's tied to strategy and product decisions. I'm particularly interested in how data shapes product strategy - from feature prioritization to market expansion to user behavior analysis. That's where I like to work - where data actually drives what happens next.</p>
-  </div>
+  <section id="journey">
+    <span class="label">Professional journey</span>
+    <div class="entry">
+      <span class="idx mono">01</span>
+      <span class="title">Delhivery — Analytics &amp; BI</span>
+      <span class="fill"></span>
+      <span class="meta mono"></span>
+    </div>
+    <div class="entry">
+      <span class="idx mono">02</span>
+      <span class="title">Air India — Operations Tech</span>
+      <span class="fill"></span>
+      <span class="meta mono"></span>
+    </div>
+    <div class="entry">
+      <span class="idx mono">03</span>
+      <span class="title">Bristol Myers Squibb — Drug Development IT</span>
+      <span class="fill"></span>
+      <span class="meta mono"></span>
+    </div>
+    <div class="entry">
+      <span class="idx mono">04</span>
+      <span class="title">Sanofi — Senior Analytics Specialist</span>
+      <span class="fill"></span>
+      <span class="meta mono">2026 →</span>
+    </div>
+  </section>
 
-  <div class="section">
-    <h3>Professional Journey</h3>
-    <p>My career has taken me through different industries: I started at Delhivery in Analytics &amp; BI, then moved to Air India's Operations Tech team. Then I joined Bristol Myers Squibb in the Drug Development IT team, and now I am working with the Digital R&amp;D team at Sanofi, working on projects that hopefully help patients.</p>
-  </div>
+  <hr class="rule">
 
-  <div class="section">
-    <h3>Outside of Work</h3>
-    <p>When I'm not working with data, you can find me strength training, exploring the art of brewing coffee, and occasionally writing <a href="https://ordinaryanalysis.substack.com/">Ordinary Analysis</a> - my blog where I share both technical explorations and personal reflections.</p>
-  </div>
+  <section id="outside">
+    <span class="label">Outside of work</span>
+    <p>Training for half marathons, playing pickleball, learning guitar, and writing <a href="https://ordinaryanalysis.substack.com/">Ordinary Analysis</a> — a newsletter on cities, politics, and the patterns hiding in ordinary things.</p>
+  </section>
 
-  <p>Open to conversations about Product Analytics, Strategic Analytics, and Decision Sciences roles.</p>
-
-  <div class="contact">
-    <p><strong>Contact:</strong> <a href="mailto:shibaprasad.b@outlook.com">shibaprasad.b@outlook.com</a></p>
-  </div>
 </div>
