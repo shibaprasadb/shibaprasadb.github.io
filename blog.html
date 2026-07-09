@@ -5,7 +5,7 @@ title: Blog
 <div class="container blog-container">
   {% assign sorted_tags = site.tags | sort %}
   <div class="blog-filter-bar" aria-label="Post category filters">
-    <span class="filter-label">Filter:</span>
+    <span class="filter-label">Filter</span>
     <a class="filter-link" href="{{ '/blog.html' | relative_url }}" data-tag-name="All">All</a>
     {% for tag in sorted_tags %}
       {% assign tag_name = tag[0] %}
@@ -31,11 +31,13 @@ title: Blog
           {% assign tag_slugs = tag_slugs | append: tag_slug %}
         {% endfor %}
       {% endif %}
-      <article class="post-row" data-tags="{{ tag_slugs }}">
-        <time class="post-row-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-        <h2 class="post-row-title">
+      <article class="entry post-row" data-tags="{{ tag_slugs }}">
+        <span class="dot" aria-hidden="true"></span>
+        <h2 class="title post-row-title">
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h2>
+        <span class="fill"></span>
+        <time class="meta mono post-row-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
       </article>
     {% endfor %}
   </div>

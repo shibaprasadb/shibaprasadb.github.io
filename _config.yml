@@ -10,3 +10,10 @@ excerpt_separator: <!--more-->
 
 feed:
   path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

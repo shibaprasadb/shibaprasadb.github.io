@@ -1,15 +1,15 @@
-<nav>
-  <div class="nav-inner">
-    <a href="{{ '/' | relative_url }}" class="nav-brand">Shibaprasad Bhattacharya</a>
-    <div class="nav-links">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-      <a href="{{ '/publications.html' | relative_url }}">Publications</a>
-      <a href="{{ '/subscribe.html' | relative_url }}">Subscribe</a>
-      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-      <a href="https://www.linkedin.com/in/shibaprasad-bhattacharya/" target="_blank"><img src="{{ '/images/linkedin_logo.png' | relative_url }}" alt="LinkedIn" class="nav-icon"></a>
-      <a href="https://github.com/shibaprasadb" target="_blank"><img src="{{ '/images/github_logo.png' | relative_url }}" alt="GitHub" class="nav-icon"></a>
-      <button id="dark-toggle">🌙</button>
+<header class="site-header">
+  <div class="top-row">
+    <div>
+      <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
+      <p class="tagline">Product &amp; strategic analytics. Decision intelligence.</p>
     </div>
+    <button id="dark-toggle" aria-label="Toggle dark mode">◐</button>
   </div>
-</nav>
+  <nav>
+    <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+    <a href="{{ '/publications.html' | relative_url }}">Publications</a>
+    <a href="{{ '/subscribe.html' | relative_url }}">Subscribe</a>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </nav>
+</header>
