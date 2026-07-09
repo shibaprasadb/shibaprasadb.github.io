@@ -635,6 +635,235 @@ body.dark-mode .tag-reflections    { background: #581c87; color: #e9d5ff; }
 }
 
 /* ============================================
+   Homepage Editorial Redesign
+   Scoped to body.home (index page only) so
+   blog.html / publications.html / subscribe.html
+   are unaffected.
+   ============================================ */
+:root {
+  --paper: #EEF0EC;
+  --ink: #1C1E1B;
+  --ink-soft: #63665F;
+  --rule: #D2D5CD;
+  --accent: #1D3557;
+  --accent-soft: #E2E6E9;
+}
+
+body.dark-mode {
+  --paper: #14161A;
+  --ink: #E6E8E3;
+  --ink-soft: #93968E;
+  --rule: #2C2F2B;
+  --accent: #7FAE8F;
+  --accent-soft: #1B241E;
+}
+
+body.home {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body.home nav {
+  background: var(--paper);
+  border-bottom-color: var(--rule);
+}
+
+body.home .nav-brand,
+body.home .nav-links a {
+  color: var(--ink);
+}
+
+body.home .nav-links a:hover,
+body.home .nav-links a.active,
+body.home .nav-links a:visited:hover {
+  color: var(--accent);
+}
+
+body.home #dark-toggle {
+  color: var(--ink);
+}
+
+body.home #dark-toggle:hover {
+  color: var(--accent);
+}
+
+body.home .site-footer {
+  background: var(--paper);
+  border-top-color: var(--rule);
+}
+
+body.home .site-footer a {
+  color: var(--ink-soft);
+}
+
+body.home .site-footer a:hover {
+  color: var(--accent);
+}
+
+body.home a:focus-visible,
+body.home button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.home-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 56px 24px 64px;
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.home-wrap .mono {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  letter-spacing: .03em;
+}
+
+.home-wrap a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+.home-wrap a:hover {
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
+.home-wrap .rule {
+  border: none;
+  border-top: 1px dotted var(--rule);
+  margin: 36px 0;
+}
+
+.home-wrap section {
+  margin-bottom: 8px;
+}
+
+.home-wrap .label {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  letter-spacing: .03em;
+  font-size: .72rem;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 18px;
+  display: block;
+}
+
+.home-wrap p {
+  margin: 0 0 16px;
+}
+
+.home-wrap p:last-child {
+  margin-bottom: 0;
+}
+
+.home-wrap .now-line {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+.home-wrap .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  position: relative;
+  top: -2px;
+}
+
+.home-wrap .entry {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.home-wrap .entry:last-child {
+  margin-bottom: 0;
+}
+
+.home-wrap .entry .idx {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  letter-spacing: .03em;
+  color: var(--ink-soft);
+  font-size: .72rem;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.home-wrap .entry .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.home-wrap .entry .title a {
+  border-bottom: 1px solid var(--rule);
+}
+
+.home-wrap .entry .title a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.home-wrap .entry .fill {
+  flex: 1;
+  border-bottom: 1px dotted var(--rule);
+  margin: 0 8px;
+  height: 0;
+  transform: translateY(-5px);
+  min-width: 20px;
+}
+
+.home-wrap .entry .meta {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  letter-spacing: .03em;
+  white-space: nowrap;
+  font-size: .76rem;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .home-wrap {
+    padding: 40px 20px 48px;
+  }
+
+  .home-wrap .entry .title {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+
+  .home-wrap .entry .fill {
+    display: none;
+  }
+
+  .home-wrap .entry {
+    flex-wrap: wrap;
+    column-gap: 8px;
+  }
+
+  .home-wrap .entry .meta {
+    margin-left: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-wrap,
+  .home-wrap * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ============================================
    Utility for scroll-margin with sticky nav
    ============================================ */
 .container:first-of-type {
