@@ -57,15 +57,15 @@ Now the story time, what this means?
 
 1. **Cost does buy score, but the returns are sharply diminishing.**
 
-All the models that we used, roughly agrees with this. Log(cost) beats raw cost if Composer is removed. And the slope of the mixed model also confirms it - doubling cost buys roughly 6.7 points [^1], consistently, once you control for which family you're in.
+   All the models that we used, roughly agrees with this. Log(cost) beats raw cost if Composer is removed. And the slope of the mixed model also confirms it - doubling cost buys roughly 6.7 points [^1], consistently, once you control for which family you're in.
 
 2. **Curios case of Composer**
 
-Composer is developed by Cursor, and it broke the log(cost) structure completely. For the statistical analysis, we filtered it out as an outlier. But the more honest reading might be (if the numbers to be believed) : it is a well optimised cheap model.
+   Composer is developed by Cursor, and it broke the log(cost) structure completely. For the statistical analysis, we filtered it out as an outlier. But the more honest reading might be (if the numbers to be believed) : it is a well optimised cheap model.
 
 3. **Family matters**
 
-The mixed model splits the leftover variance (whatever cost doesn't explain) into two parts: how much comes from which family versus everything else. Squaring the standard deviations and comparing them, family accounts for ~85% of that leftover variation, noise only ~15%. In plain terms: pick two model variants at the same price, and which family they belong to explains most of the score gap between them.
+   The mixed model splits the leftover variance (whatever cost doesn't explain) into two parts: how much comes from which family versus everything else. Squaring the standard deviations and comparing them, family accounts for ~85% of that leftover variation, noise only ~15%. In plain terms: pick two model variants at the same price, and which family they belong to explains most of the score gap between them.
 
 ---
 
