@@ -480,6 +480,49 @@ button:focus-visible {
   line-height: 1.5;
 }
 
+
+/* ============================================
+   Tables
+   ============================================ */
+table {
+  width: 100%;
+  margin: 28px 0;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  line-height: 1.45;
+}
+
+th,
+td {
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+th {
+  font-weight: 600;
+  text-align: left;
+  background: var(--color-accent-soft);
+}
+
+tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--color-accent-soft) 35%, transparent);
+}
+
+@supports not (background: color-mix(in srgb, white, black)) {
+  tbody tr:nth-child(even) {
+    background: var(--color-accent-soft);
+  }
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
 /* ============================================
    Images
    ============================================ */
