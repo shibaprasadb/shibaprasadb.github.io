@@ -34,7 +34,7 @@ But that's everyone. Street vendors, casual construction labour, salaried clerks
 
 The obvious way to check if this is "cheap": price a full-time domestic worker against the country's own GDP per capita. And check if you can spot a pattern there.
 
-![Chart 1: Domestic help cost vs GDP per capita, 20 countries]("https://shibaprasadb.github.io/images/posts/2026-07-17-househelp-india/chart_gdp_help.png)
+![Chart 1: Domestic help cost vs GDP per capita, 20 countries]("/images/posts/2026-07-17-househelp-india/chart_gdp_help.png)
 
 And the naive answer surprised me. India isn't the cheapest country on this list. It's the most expensive, by a wide margin. A full-time domestic worker here costs more than the average Indian's entire annual income. Not a large share of it. Even if we use the earlier discussed 15k number, the percentage would still be close to or more than 100%.
 
@@ -46,7 +46,7 @@ But comparing cost to GDP per capita has a slight problem. GDP per capita isn't 
 
 How many hours of someone else's work can an hour of your own work buy?
 
-![Chart 2: Hours of domestic help one hour of average work buys]("https://shibaprasadb.github.io/images/posts/2026-07-17-househelp-india/chart_final_payoff.png")
+![Chart 2: Hours of domestic help one hour of average work buys]("/images/posts/2026-07-17-househelp-india/chart_final_payoff.png")
 
 This is where it stopped being an interesting fact and started being a bit uncomfortable. Everywhere else in the sample, an hour of average work buys more than an hour of domestic help. In India, it buys less. An average Indian's hour of work buys less than an hour of a domestic worker's time, not more. (Singapore's number is enormous, but for a completely different reason. That's imported labour, as we have already discussed.)
 
