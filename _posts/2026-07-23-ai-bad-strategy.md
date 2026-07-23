@@ -87,4 +87,4 @@ The volatility in human output is an asset for strategy work. You need sharper, 
 
 ---
 
-[^1] I also think good tech & business consultants will be in huge demand. Pretty soon.
+[^1]: I also think good tech & business consultants will be in huge demand. Pretty soon.
