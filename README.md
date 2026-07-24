@@ -13,7 +13,7 @@ A minimal, responsive personal website featuring technical writing on analytics,
 - **Static Site Generator:** Jekyll 4.3
 - **Deployment:** GitHub Pages via GitHub Actions
 - **Comments:** Giscus (GitHub Discussions)
-- **Analytics:** GoatCounter, Umami
+- **Analytics:** Umami
 - **Newsletter:** Beehiiv integration
 - **RSS/Atom Feed:** Jekyll Feed plugin (`/feed.xml`)
 
@@ -113,9 +113,7 @@ Substack newsletter (Data Signal) signup forms are embedded on post pages and th
 
 ### Analytics
 
-Two analytics platforms are integrated:
-- GoatCounter for privacy-focused metrics
-- Umami for detailed analytics
+Umami is integrated as the single analytics platform. Using one analytics script keeps the page lighter while still providing privacy-friendly traffic and content metrics.
 
 Configuration is in `_layouts/default.html`.
 
