@@ -12,6 +12,24 @@ layout: default
   </p>
   {% endif %}
   {{ content }}
+  {% if page.previous or page.next %}
+  <nav class="post-nav" aria-label="Essay navigation">
+    {% if page.previous %}
+    <div class="entry">
+      <span class="meta mono">Previous essay</span>
+      <span class="fill" aria-hidden="true"></span>
+      <span class="title"><a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a></span>
+    </div>
+    {% endif %}
+    {% if page.next %}
+    <div class="entry">
+      <span class="meta mono">Next essay</span>
+      <span class="fill" aria-hidden="true"></span>
+      <span class="title"><a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a></span>
+    </div>
+    {% endif %}
+  </nav>
+  {% endif %}
   <hr />
   <h3>Subscribe to Ordinary Analysis</h3>
   <iframe src="https://ordinaryanalysis.substack.com/embed" width="480" height="320" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no"></iframe>
