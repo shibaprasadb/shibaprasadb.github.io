@@ -109,11 +109,11 @@ Blog posts include Giscus-powered comments. Configure in `_includes/giscus.html`
 
 ### Newsletter Integration
 
-Substack newsletter (Data Signal) signup forms are embedded on post pages and the dedicated subscribe page (`subscribe.html`).
+Substack newsletter (Ordinary Analysis) signup forms are embedded on post pages and the dedicated subscribe page (`subscribe.html`).
 
 ### Analytics
 
-Umami is integrated as the single analytics platform. Using one analytics script keeps the page lighter while still providing privacy-friendly traffic and content metrics.
+Umami is integrated as the single analytics platform.
 
 Configuration is in `_layouts/default.html`.
 
