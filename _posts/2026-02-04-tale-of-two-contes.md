@@ -30,34 +30,24 @@ Turns out - it is highly significant!
 The difference is even significant for Pep. Now if you think about it - that is expected. UCL is a tougher competition. So, we would expect to see some reduction in the winning percentage.
 
 For Klopp, though, it is not significant. 
-```
-┌───────────┬───────────────┬──────────────────┬─────────────┬──────────┬──────────────────────────────┐
-│  Manager  │ UCL Win Rate  │ League Win Rate  │ Z-statistic │ P-value  │       Interpretation         │
-├───────────┼───────────────┼──────────────────┼─────────────┼──────────┼──────────────────────────────┤
-│   Conte   │     34.0%     │      60.5%       │    3.661    │ 0.000251 │ Highly significant difference│
-├───────────┼───────────────┼──────────────────┼─────────────┼──────────┼──────────────────────────────┤
-│ Guardiola │     62.4%     │      72.2%       │    2.540    │ 0.011086 │   Significant difference     │
-├───────────┼───────────────┼──────────────────┼─────────────┼──────────┼──────────────────────────────┤
-│   Klopp   │     56.9%     │      62.9%       │    1.161    │ 0.245760 │  No significant difference   │
-└───────────┴───────────────┴──────────────────┴─────────────┴──────────┴──────────────────────────────┘
-```
+
+| Manager | UCL Win Rate | League Win Rate | Z-statistic | P-value | Interpretation |
+|---|---|---|---|---|---|
+| Conte | 34.0% | 60.5% | 3.661 | 0.000251 | Highly significant difference |
+| Guardiola | 62.4% | 72.2% | 2.540 | 0.011086 | Significant difference |
+| Klopp | 56.9% | 62.9% | 1.161 | 0.245760 | No significant difference |
 
 ## How different are the tactical profiles?
 
 In the first section, we looked at winning % only. Now, let's examine the complete tactical profile - how the full distribution of wins, draws, and losses shifts between competitions.
 
 The Chi-square test helps us understand if the entire result pattern changes, not just the win rate. And interestingly, even Klopp shows a significant difference here despite his Z-test being non-significant. This suggests his teams play differently in Europe (fewer draws, more decisive results), even though his overall win rate stays similar.
-```
-┌───────────┬───────────┬──────────┬────────────┬──────────────────────────────┐
-│  Manager  │    χ²     │ P-value  │ Cramér's V │       Interpretation         │
-├───────────┼───────────┼──────────┼────────────┼──────────────────────────────┤
-│   Conte   │   14.136  │ 0.000852 │   0.145    │ Highly significant difference│
-├───────────┼───────────┼──────────┼────────────┼──────────────────────────────┤
-│ Guardiola │    6.441  │ 0.039928 │   0.092    │   Significant difference     │
-├───────────┼───────────┼──────────┼────────────┼──────────────────────────────┤
-│   Klopp   │   10.336  │ 0.005696 │   0.127    │   Significant difference     │
-└───────────┴───────────┴──────────┴────────────┴──────────────────────────────┘
-```
+
+| Manager | χ² | P-value | Cramér's V | Interpretation |
+|---|---|---|---|---|
+| Conte | 14.136 | 0.000852 | 0.145 | Highly significant difference |
+| Guardiola | 6.441 | 0.039928 | 0.092 | Significant difference |
+| Klopp | 10.336 | 0.005696 | 0.127 | Significant difference |
 
 So far, all three managers show some form of difference between their league and UCL performances. But here's the key question: **Is the difference abnormal, or is it just the "Elite Tax" of playing in Europe?**
 
@@ -76,17 +66,12 @@ If a manager's drop is within the 10% zone → **Normal** (performing as expecte
 If a manager's drop exceeds 10% → **Abnormal** (genuine UCL problem)
 
 ### The Results
-```
-┌───────────┬───────────┬────────────────────┬──────────────────────────────────┐
-│  Manager  │ Mean Drop │ P(Exceeds 10% Tax) │         Interpretation           │
-├───────────┼───────────┼────────────────────┼──────────────────────────────────┤
-│   Conte   │   25.9%   │      98.76%        │ Abnormal UCL underperformance    │
-├───────────┼───────────┼────────────────────┼──────────────────────────────────┤
-│ Guardiola │    9.9%   │      48.36%        │ Normal (within expected range)   │
-├───────────┼───────────┼────────────────────┼──────────────────────────────────┤
-│   Klopp   │    6.1%   │      23.18%        │ Normal (well within range)       │
-└───────────┴───────────┴────────────────────┴──────────────────────────────────┘
-```
+
+| Manager | Mean Drop | P(Exceeds 10% Tax) | Interpretation |
+|---|---|---|---|
+| Conte | 25.9% | 98.76% | Abnormal UCL underperformance |
+| Guardiola | 9.9% | 48.36% | Normal (within expected range) |
+| Klopp | 6.1% | 23.18% | Normal (well within range) |
 
 ![Gap Analysis](/images/posts/2026-02-04-tale-of-two-contes/gap_distribution_chart.png)
 
