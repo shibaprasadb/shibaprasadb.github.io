@@ -21,6 +21,11 @@
   --font-size-h3: clamp(22px, 2.5vw, 28px);
   --font-size-listing: clamp(18px, 1vw + 14px, 20px);
 
+  /* Fluid spacing retains comfortable 12/32/40px minima on narrow screens. */
+  --space-compact: clamp(12px, 1.5vw, 20px);
+  --space-section: clamp(32px, 5vw, 56px);
+  --space-page: clamp(40px, 6vw, 64px);
+
   --layout-max: 1000px;
   --prose-max: 780px;
 }
@@ -133,7 +138,7 @@ button:focus-visible {
 .site-header {
   max-width: var(--layout-max);
   margin: 0 auto;
-  padding: 48px 0 0;
+  padding: var(--space-page) 0 0;
   padding-inline: clamp(20px, 5vw, 64px);
 }
 
@@ -217,6 +222,7 @@ button:focus-visible {
 
 .post-container {
   max-width: var(--prose-max);
+  padding-top: var(--space-page);
 }
 
 .container.about {
@@ -225,7 +231,7 @@ button:focus-visible {
 }
 
 .section {
-  margin-bottom: 56px;
+  margin-bottom: var(--space-section);
 }
 
 .section:last-child {
@@ -239,7 +245,7 @@ button:focus-visible {
 
 /* Contact section */
 .contact {
-  margin-top: 56px;
+  margin-top: var(--space-section);
   padding-top: 32px;
   border-top: 1px dotted var(--color-border);
 }
@@ -253,8 +259,8 @@ button:focus-visible {
    ============================================ */
 .site-footer {
   max-width: var(--layout-max);
-  margin: 56px auto 0;
-  padding: 24px 0 48px;
+  margin: var(--space-section) auto 0;
+  padding: var(--space-compact) 0 var(--space-page);
   padding-inline: clamp(20px, 5vw, 64px);
   border-top: 1px dotted var(--color-border);
 }
@@ -297,7 +303,7 @@ button:focus-visible {
 .rule {
   border: none;
   border-top: 1px dotted var(--color-border);
-  margin: 36px 0;
+  margin: var(--space-section) 0;
 }
 
 .dot {
@@ -376,12 +382,16 @@ button:focus-visible {
 .home-wrap {
   max-width: var(--layout-max);
   margin: 0 auto;
-  padding: 40px 0 64px;
+  padding: var(--space-page) 0;
   padding-inline: clamp(20px, 5vw, 64px);
 }
 
 .home-wrap section {
-  margin-bottom: 8px;
+  margin: 0;
+}
+
+.home-wrap #intro p:not(:last-child) {
+  margin-bottom: var(--space-compact);
 }
 
 .home-wrap p:last-child {
@@ -392,7 +402,7 @@ button:focus-visible {
    Blog Styles — Minimal Dot-Leader List
    ============================================ */
 .blog-container {
-  padding-top: 32px;
+  padding-top: var(--space-page);
 }
 
 .blog-filter-bar {
@@ -557,6 +567,51 @@ img {
   color: var(--color-text-secondary);
 }
 
+/* Post rhythm is controlled by semantic groups in the post layout. */
+.post-header {
+  margin-bottom: var(--space-section);
+}
+
+.post-header h1 {
+  margin-bottom: var(--space-compact);
+}
+
+.post-header .post-date,
+.post-header .post-tags {
+  margin-bottom: var(--space-compact);
+}
+
+.post-header > :last-child {
+  margin-bottom: 0;
+}
+
+.post-content {
+  margin-bottom: var(--space-section);
+}
+
+.post-content > :last-child,
+.post-subscription > :last-child {
+  margin-bottom: 0;
+}
+
+.post-nav {
+  margin: var(--space-section) 0;
+}
+
+.post-subscription {
+  padding-top: var(--space-section);
+  border-top: 1px dotted var(--color-border);
+}
+
+.post-subscription h3 {
+  margin-bottom: var(--space-compact);
+}
+
+.post-subscription iframe {
+  display: block;
+  max-width: 100%;
+}
+
 blockquote {
   font-weight: 500;
   font-style: italic;
@@ -586,22 +641,11 @@ hr {
    Mobile Responsive (< 768px)
    ============================================ */
 @media (max-width: 768px) {
-  .site-header {
-    padding-top: 32px;
-  }
-
   .container.about {
     padding-top: 40px;
     padding-bottom: 40px;
   }
 
-  .section {
-    margin-bottom: 40px;
-  }
-
-  .contact {
-    margin-top: 40px;
-  }
 }
 
 @media (max-width: 480px) {
