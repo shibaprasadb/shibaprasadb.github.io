@@ -15,8 +15,8 @@
   --font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
-  --container-max: 1200px;
-  --content-max: 720px;
+  --layout-max: 1000px;
+  --prose-max: 780px;
 }
 
 body.dark-mode {
@@ -125,9 +125,10 @@ button:focus-visible {
    Site header / navigation — compact masthead
    ============================================ */
 .site-header {
-  max-width: var(--content-max);
+  max-width: var(--layout-max);
   margin: 0 auto;
-  padding: 48px 24px 0;
+  padding: 48px 0 0;
+  padding-inline: clamp(20px, 5vw, 64px);
 }
 
 .site-header .top-row {
@@ -203,9 +204,13 @@ button:focus-visible {
    Body Content Sections
    ============================================ */
 .container {
-  max-width: var(--content-max);
+  max-width: var(--layout-max);
   margin: 0 auto;
-  padding: 0 24px;
+  padding-inline: clamp(20px, 5vw, 64px);
+}
+
+.post-container {
+  max-width: var(--prose-max);
 }
 
 .container.about {
@@ -241,9 +246,10 @@ button:focus-visible {
    Footer
    ============================================ */
 .site-footer {
-  max-width: var(--content-max);
+  max-width: var(--layout-max);
   margin: 56px auto 0;
-  padding: 24px 24px 48px;
+  padding: 24px 0 48px;
+  padding-inline: clamp(20px, 5vw, 64px);
   border-top: 1px dotted var(--color-border);
 }
 
@@ -362,9 +368,10 @@ button:focus-visible {
    Homepage layout wrapper
    ============================================ */
 .home-wrap {
-  max-width: var(--content-max);
+  max-width: var(--layout-max);
   margin: 0 auto;
-  padding: 40px 24px 64px;
+  padding: 40px 0 64px;
+  padding-inline: clamp(20px, 5vw, 64px);
 }
 
 .home-wrap section {
@@ -578,11 +585,7 @@ hr {
   }
 
   .site-header {
-    padding: 32px 24px 0;
-  }
-
-  .container {
-    padding: 0 24px;
+    padding-top: 32px;
   }
 
   .container.about {
@@ -600,12 +603,6 @@ hr {
 }
 
 @media (max-width: 480px) {
-  .home-wrap,
-  .site-header {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   .entry .title {
     white-space: normal;
     overflow: visible;
