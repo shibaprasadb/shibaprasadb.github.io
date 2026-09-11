@@ -11,6 +11,10 @@
   --color-accent: #1D3557;
   --color-border: #D2D5CD;
   --color-accent-soft: #E2E6E9;
+  --color-footer-bg: #1D3557;
+  --color-footer-text: #F7F9FC;
+  --color-footer-link: #FFFFFF;
+  --color-footer-link-hover: #A8DADC;
 
   --font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
@@ -37,6 +41,10 @@ body.dark-mode {
   --color-accent: #7FAE8F;
   --color-border: #2C2F2B;
   --color-accent-soft: #1B241E;
+  --color-footer-bg: #1B241E;
+  --color-footer-text: #F1F5F2;
+  --color-footer-link: #FFFFFF;
+  --color-footer-link-hover: #B7E4C7;
 }
 
 /* ============================================
@@ -258,18 +266,23 @@ button:focus-visible {
    Footer
    ============================================ */
 .site-footer {
+  margin-top: var(--space-section);
+  background: var(--color-footer-bg);
+  color: var(--color-footer-text);
+}
+
+.site-footer__inner {
   max-width: var(--layout-max);
-  margin: var(--space-section) auto 0;
-  padding: var(--space-compact) 0 var(--space-page);
+  margin: 0 auto;
+  padding-block: var(--space-compact);
   padding-inline: clamp(20px, 5vw, 64px);
-  border-top: 1px dotted var(--color-border);
 }
 
 .site-footer p {
   margin: 0;
   font-size: .85rem;
   font-weight: 400;
-  color: var(--color-text-secondary);
+  color: var(--color-footer-text);
 }
 
 .site-footer p:first-child {
@@ -277,13 +290,17 @@ button:focus-visible {
 }
 
 .site-footer a {
-  color: var(--color-text-secondary);
-  border-bottom: 1px solid var(--color-border);
+  color: var(--color-footer-link);
+  border-bottom: 1px solid currentColor;
 }
 
 .site-footer a:hover {
-  color: var(--color-accent);
-  border-bottom-color: var(--color-accent);
+  color: var(--color-footer-link-hover);
+  border-bottom-color: currentColor;
+}
+
+.site-footer a:focus-visible {
+  outline-color: var(--color-footer-link-hover);
 }
 
 /* ============================================
