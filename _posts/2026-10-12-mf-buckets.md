@@ -6,6 +6,8 @@ date: 2026-10-12
 tags: ["data-stories"]
 
 description: "How my older and newer money are doing?"
+
+image: "https://shibaprasadb.github.io/images/posts/2026-10-12-mf-buckets/all_funds_vs_nifty.png"
 ---
 
 The new broker apps have done relatively well displaying aggregated information. It displays the XIRR (Extended Internal Rate of Return). Which is a fair number. That number gives you a snapshot of your return %. It accounts for when each rupee went in, and tells you how the whole portfolio is doing.
