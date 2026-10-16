@@ -1,5 +1,5 @@
 ---
-title: “Fundprint: Understand Your Mutual Funds Without Sharing Your Data”
+title: "Fundprint: Understand Your Mutual Funds Without Sharing Your Data"
 
 date: 2026-10-12
 
