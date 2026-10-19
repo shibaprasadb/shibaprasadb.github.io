@@ -1,70 +1,75 @@
 ---
 layout: default
 title: Shibaprasad Bhattacharya
-description: "Product Analytics & Strategy. Decision Intelligence."
+description: "I use data science to shape product and business strategy, where the output is measured in dollars, time, or decisions changed, not just accuracy scores."
 ---
-<div class="home-wrap">
-
-<section id="intro">
-  <p>I use data science to shape product and business strategy, where the output is measured in dollars, time, or decisions changed, not just accuracy scores. I've worked across logistics, aviation, and pharma R&amp;D. The through-line is product-driven thinking and a bias toward asking the second question, not just answering the first.</p>
-  <p>I do my best work on messy, ambiguous problems: the kind that sit between disciplines, where no single team owns the answer.</p>
+<section class="section section--intro">
+  <div class="section__body">
+    <p class="intro">I use data science to shape product and business strategy, where the output is measured in dollars, time, or decisions changed, not just accuracy scores. I’ve worked across logistics, aviation, and pharma R&amp;D. The through-line is product-driven thinking and a bias toward asking the second question, not just answering the first.</p>
+    <p class="contact inline-links">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a><span class="sep" aria-hidden="true"> · </span>
+      <a href="https://www.linkedin.com/in/shibaprasad-bhattacharya/" target="_blank" rel="noopener">LinkedIn</a><span class="sep" aria-hidden="true"> · </span>
+      <a href="https://github.com/shibaprasadb" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </div>
 </section>
 
-  <hr class="rule">
+<section class="section" aria-labelledby="problems-label">
+  <h2 class="label" id="problems-label">Problems I’ve worked on</h2>
+  <div class="section__body">
+    <ul class="problems">
+      <li><strong>A proactive supply-chain control tower.</strong> It flags shortfalls and excess stock early, so hubs stay supplied while waste goes down by 17%.</li>
+      <li><strong>Choosing where to launch clinical trials.</strong> A data-driven tool that ranks regions by likely enrolment, used to pick trial locations across 13 countries.</li>
+      <li><strong>Redesigning a national service-centre network</strong> for one of India’s largest logistics companies, so each centre covers the right area at lower cost.</li>
+    </ul>
+  </div>
+</section>
 
-  <section id="now">
-    <span class="label">Now</span>
-    <p class="now-line"><span class="dot" aria-hidden="true"></span> Senior Analytics Specialist at Sanofi, Hyderabad — solving problems in the pharma R&D space with AI & Analytics.</p>
-  </section>
+<section class="section" aria-labelledby="work-label">
+  <h2 class="label" id="work-label">Work</h2>
+  <div class="section__body">
+    <ul class="rows">
+      <li class="row">
+        <p class="row__title"><strong>Sanofi</strong> — Senior Analytics Specialist, Digital R&amp;D</p>
+        <span class="date">2026 – present</span>
+        <p class="row__sub">Product owner for a clinical-development product; AI and analytics for pharma R&amp;D.</p>
+      </li>
+      <li class="row">
+        <p class="row__title">Bristol Myers Squibb — Lead Data Analyst, Drug Development IT</p>
+        <span class="date">May 2024 – Mar 2026</span>
+      </li>
+      <li class="row">
+        <p class="row__title">Air India — Associate Manager, Operations Tech</p>
+        <span class="date">Oct 2023 – May 2024</span>
+      </li>
+      <li class="row">
+        <p class="row__title">Delhivery — Senior Analyst, Analytics &amp; BI</p>
+        <span class="date">Apr 2021 – Oct 2023</span>
+      </li>
+    </ul>
+  </div>
+</section>
 
-  <hr class="rule">
+<section class="section" aria-labelledby="writing-label">
+  <h2 class="label" id="writing-label">Selected writing</h2>
+  <div class="section__body">
+    {% comment %} Hand-picked: add `selected: true` to a post's front matter. {% endcomment %}
+    {% assign selected_posts = site.posts | where: "selected", true %}
+    <ul class="rows">
+      {% for post in selected_posts %}
+      <li class="row">
+        <a class="row__title plain-link" href="{{ post.url | relative_url }}">{{ post.title | smartify }}</a>
+        <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+    <a class="more-link plain-link" href="{{ '/blog.html' | relative_url }}">All essays →</a>
+  </div>
+</section>
 
-  <section id="writing">
-    <span class="label">Recent writing</span>
-    {% for post in site.posts limit:3 %}
-    <div class="entry">
-      <span class="title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
-      <span class="fill"></span>
-      <span class="meta mono">{{ post.date | date: "%b %Y" }}</span>
-    </div>
-    {% endfor %}
-  </section>
-
-  <hr class="rule">
-
-  <section id="journey">
-    <span class="label">Professional journey</span>
-    <div class="entry">
-      <span class="idx mono">04</span>
-      <span class="title">Sanofi — Senior Analytics Specialist (Digital R&amp;D)</span>
-      <span class="fill"></span>
-      <span class="meta mono">2026 →</span>
-    </div>
-    <div class="entry">
-      <span class="idx mono">03</span>
-      <span class="title">Bristol Myers Squibb — Lead Data Analyst (Drug Development IT)</span>
-      <span class="fill"></span>
-      <span class="meta mono"></span>
-    </div>
-    <div class="entry">
-      <span class="idx mono">02</span>
-      <span class="title">Air India — Associate Manager (Operations Tech)</span>
-      <span class="fill"></span>
-      <span class="meta mono"></span>
-    </div>
-    <div class="entry">
-      <span class="idx mono">01</span>
-      <span class="title">Delhivery — Senior Analyst (Analytics &amp; BI)</span>
-      <span class="fill"></span>
-      <span class="meta mono"></span>
-    </div>
-  </section>
-
-  <hr class="rule">
-
-  <section id="outside">
-    <span class="label">Outside of work</span>
-    <p>When I'm not working with data, you can find me strength training, running, exploring the art of brewing coffee, and occasionally writing <a href="https://ordinaryanalysis.substack.com/">Ordinary Analysis</a> - my blog where I share both technical explorations and personal reflections.</p>
-  </section>
-
-</div>
+<section class="section" aria-labelledby="outside-label">
+  <h2 class="label" id="outside-label">Outside of work</h2>
+  <div class="section__body">
+    <p class="prose">When I’m not working, I’m strength training, running, or brewing coffee. I also write <a href="https://ordinaryanalysis.com" target="_blank" rel="noopener">Ordinary Analysis</a>, general observations on cities, people and everyday patterns. The <a href="{{ '/blog.html' | relative_url }}">essays</a> here stay on tech, product and data.</p>
+  </div>
+</section>

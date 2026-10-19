@@ -8,6 +8,7 @@ tags: ["strategy"]
 description: "Good strategy requires a diagnosis and a choice. AI prefers a plausible list."
 
 image: "https://shibaprasadb.github.io/images/posts/2026-07-23-ai-bad-strategy/ai_bad_strategy.png"
+selected: true
 ---
 
 In one of the recent episodes of Lenny’s Podcast (with the head of Instagram), Lenny made a comment about AI and strategy. He had expected AI to be good at strategy, but that hasn’t been the case.

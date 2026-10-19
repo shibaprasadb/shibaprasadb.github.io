@@ -4,6 +4,7 @@ date: 2026-07-09
 tags: ["product", "technical"]
 description: "Running some statistical analyses for Cursor Bench evals"
 image: "https://shibaprasadb.github.io/images/posts/2026-07-09-cursorbench-analysis/cursorbench_revamped.png"
+selected: true
 ---
 
 I was going through the [Cursor Bench](https://cursor.com/evals) evals.

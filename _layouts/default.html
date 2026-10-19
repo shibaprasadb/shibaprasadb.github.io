@@ -74,43 +74,75 @@
     }
     </script>
     {% endif %}
-    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+    <script>
+      // Apply the saved theme before first paint. No saved choice = follow the OS.
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (!theme && localStorage.getItem('dark-mode') === 'enabled') theme = 'dark';
+          if (theme === 'dark' || theme === 'light') document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="description" content="{{ meta_description | strip_html | strip_newlines | escape }}">
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
     <link rel="icon" type="image/svg+xml" href="{{ '/images/favicon.svg' | relative_url }}">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }} RSS Feed" href="{{ '/feed.xml' | absolute_url }}">
     <link rel="me" href="https://mstdn.party/@shibaprasad">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
     <!-- Umami Analytics -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="2e67cd5c-f499-4fba-a139-481c5adb30c4"></script>
 </head>
-<body>
+<body{% if site.page_width == 'wide' %} class="layout-wide"{% endif %}>
     {% include nav.html %}
+    <main class="wrap">
     {{ content }}
+    </main>
     <footer class="site-footer">
-      <div class="site-footer__inner">
-        <p>© {{ site.time | date: "%Y" }} Shibaprasad Bhattacharya</p>
-        <p>
-          <a href="mailto:shibaprasad.b@outlook.com">Email</a> ·
-          <a href="https://www.linkedin.com/in/shibaprasad-bhattacharya/" target="_blank">LinkedIn</a> ·
-          <a href="https://github.com/shibaprasadb" target="_blank">GitHub</a> ·
-          <a href="https://ordinaryanalysis.substack.com/" target="_blank">Newsletter</a>
-        </p>
+      <div class="wrap">
+        <div class="site-footer__inner">
+          <p>
+            <a href="mailto:{{ site.email }}">Email</a><span class="sep" aria-hidden="true"> · </span>
+            <a href="https://www.linkedin.com/in/shibaprasad-bhattacharya/" target="_blank" rel="noopener">LinkedIn</a><span class="sep" aria-hidden="true"> · </span>
+            <a href="https://github.com/shibaprasadb" target="_blank" rel="noopener">GitHub</a><span class="sep" aria-hidden="true"> · </span>
+            <a href="{{ site.scholar_url }}" target="_blank" rel="noopener">Google Scholar</a><span class="sep" aria-hidden="true"> · </span>
+            <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+          </p>
+          <p>© {{ site.time | date: "%Y" }} Shibaprasad Bhattacharya</p>
+        </div>
       </div>
     </footer>
     <script>
-      const toggle = document.getElementById('dark-toggle');
-      if (localStorage.getItem('dark-mode') === 'enabled') {
-        document.body.classList.add('dark-mode');
-      }
-      toggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        if (document.body.classList.contains('dark-mode')) {
-          localStorage.setItem('dark-mode', 'enabled');
-        } else {
-          localStorage.removeItem('dark-mode');
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.getElementById('theme-toggle');
+        var media = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function currentTheme() {
+          return root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light');
         }
-      });
+
+        // Keep the giscus comments widget in step with the page theme.
+        function syncGiscus(theme) {
+          var frame = document.querySelector('iframe.giscus-frame');
+          if (frame) {
+            frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, 'https://giscus.app');
+          }
+        }
+
+        toggle.addEventListener('click', function () {
+          var next = currentTheme() === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try {
+            localStorage.setItem('theme', next);
+            localStorage.removeItem('dark-mode');
+          } catch (e) {}
+          syncGiscus(next);
+        });
+
+      })();
     </script>
 </body>
 </html>
