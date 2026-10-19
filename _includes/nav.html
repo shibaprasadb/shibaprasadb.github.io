@@ -1,15 +1,11 @@
-<header class="site-header">
-  <div class="top-row">
-    <div>
-      <a href="{{ '/' | relative_url }}" class="brand">{{ site.title }}</a>
-      <p class="tagline">Product Analytics &amp; Strategy. Decision Intelligence.</p>
-    </div>
-    <button id="dark-toggle" aria-label="Toggle dark mode">◐</button>
+<header class="site-header wrap">
+  <div class="site-header__top">
+    <a href="{{ '/' | relative_url }}" class="site-name">Shibaprasad Bhattacharya</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">◐</button>
   </div>
-  <nav>
-    <a href="{{ '/blog.html' | relative_url }}">ESSAYS</a>
-    <a href="{{ '/publications.html' | relative_url }}">Publications</a>
-    <a href="{{ '/subscribe.html' | relative_url }}">Subscribe</a>
-    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  <nav class="site-nav" aria-label="Main">
+    <a class="plain-link{% if page.layout == 'post' or page.layout == 'tag' %} is-active{% endif %}" href="{{ '/blog.html' | relative_url }}"{% if page.url == '/blog.html' %} aria-current="page"{% endif %}>Essays</a>
+    <a class="plain-link" href="{{ site.scholar_url }}" target="_blank" rel="noopener">Google Scholar <span aria-hidden="true">↗</span></a>
+    <a class="plain-link" href="{{ '/subscribe.html' | relative_url }}"{% if page.url == '/subscribe.html' %} aria-current="page"{% endif %}>Subscribe</a>
   </nav>
 </header>

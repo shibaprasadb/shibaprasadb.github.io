@@ -8,6 +8,7 @@ tags: ["product"]
 description: "Mutual fund insights from your CAS statement, entirely in your browser. Nothing stored."
 
 image: "https://shibaprasadb.github.io/images/posts/2026-10-17-fundprint/fp_thumbnail.png"
+selected: true
 ---
 
 In my [last post](https://www.shibaprasadb.com/2026/10/12/mf-buckets.html), I did some basic exploratory analysis on my Mutual Fund statement. I started because my regular investment app wasn't giving me the deeper insights I wanted about my portfolio.

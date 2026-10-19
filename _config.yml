@@ -21,3 +21,10 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+# Shown on the homepage contact line and in the footer
+email: shibaprasad.b@outlook.com
+scholar_url: "https://scholar.google.com/citations?user=hitU7KwAAAAJ&hl=en"
+
+# Page layout: "narrow" (720px column) or "wide" (1120px, labels in a left column)
+page_width: narrow

@@ -1,42 +1,43 @@
 ---
 layout: default
 ---
-<div class="container post-container">
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="post-date">{{ page.date | date: "%B %-d, %Y" }}</p>
-    {% if page.tags %}
-    <p class="post-tags">
-      {% for tag in page.tags %}
-        <a class="tag" href="{{ '/blog.html' | relative_url }}?tag={{ tag | slugify | uri_escape }}">{{ tag }}</a>
-      {% endfor %}
+<article class="essay">
+  <header class="essay__header">
+    <p class="label essay__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {%- for tag in page.tags -%}
+        <span aria-hidden="true"> · </span><a href="{{ '/tags/' | append: tag | append: '/' | relative_url }}">{{ tag | replace: '-', ' ' }}</a>
+      {%- endfor -%}
     </p>
-    {% endif %}
+    <h1 class="essay__title">{{ page.title | smartify }}</h1>
   </header>
-  <article class="post-content">
-    {{ content }}
-  </article>
-  {% if page.previous or page.next %}
-  <nav class="post-nav" aria-label="Essay navigation">
-    {% if page.previous %}
-    <div class="entry">
-      <span class="meta mono">Previous essay</span>
-      <span class="fill" aria-hidden="true"></span>
-      <span class="title"><a href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a></span>
+  <div class="essay-body-wrap">
+    <div class="prose essay__body">
+      {{ content }}
     </div>
-    {% endif %}
-    {% if page.next %}
-    <div class="entry">
-      <span class="meta mono">Next essay</span>
-      <span class="fill" aria-hidden="true"></span>
-      <span class="title"><a href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a></span>
-    </div>
-    {% endif %}
-  </nav>
+  </div>
+</article>
+
+{% if page.previous or page.next %}
+<nav class="essay-nav" aria-label="More essays">
+  {% if page.previous %}
+  <div class="essay-nav__prev">
+    <p class="label">Previous</p>
+    <a class="plain-link" href="{{ page.previous.url | relative_url }}">{{ page.previous.title | smartify }}</a>
+  </div>
   {% endif %}
-  <section class="post-subscription" aria-labelledby="subscribe-heading">
-    <h3 id="subscribe-heading">Subscribe to Ordinary Analysis</h3>
-    <iframe class="substack-embed" src="https://ordinaryanalysis.substack.com/embed" title="Subscribe to Ordinary Analysis" width="480" height="320" frameborder="0" scrolling="no"></iframe>
-  </section>
-  {% include giscus.html %}
-</div>
+  {% if page.next %}
+  <div class="essay-nav__next">
+    <p class="label">Next</p>
+    <a class="plain-link" href="{{ page.next.url | relative_url }}">{{ page.next.title | smartify }}</a>
+  </div>
+  {% endif %}
+</nav>
+{% endif %}
+
+<section class="essay-subscribe" aria-labelledby="subscribe-heading">
+  <h2 class="label" id="subscribe-heading">Subscribe to Ordinary Analysis</h2>
+  <iframe class="substack-embed" src="https://ordinaryanalysis.substack.com/embed" title="Subscribe to Ordinary Analysis" frameborder="0" scrolling="no"></iframe>
+</section>
+
+{% include giscus.html %}

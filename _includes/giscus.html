@@ -1,16 +1,25 @@
-<script src="https://giscus.app/client.js"
-        data-repo="shibaprasadb/shibaprasadb.github.io"
-        data-repo-id="R_kgDOPnNBUA"
-        data-category="Comments"
-        data-category-id="DIC_kwDOPnNBUM4Cu6ZD"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
+<div class="giscus"></div>
+<script>
+  // Load giscus with the page's current theme (the toggle can override the OS setting).
+  (function () {
+    var s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    var attrs = {
+      'data-repo': 'shibaprasadb/shibaprasadb.github.io',
+      'data-repo-id': 'R_kgDOPnNBUA',
+      'data-category': 'Comments',
+      'data-category-id': 'DIC_kwDOPnNBUM4Cu6ZD',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'top',
+      'data-theme': (document.documentElement.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')),
+      'data-lang': 'en'
+    };
+    for (var k in attrs) s.setAttribute(k, attrs[k]);
+    document.currentScript.parentNode.insertBefore(s, document.currentScript);
+  })();
 </script>
-

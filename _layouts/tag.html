@@ -1,20 +1,23 @@
 ---
 layout: default
 ---
-<div class="container blog-container">
-  <h2>Posts tagged "{{ page.tag }}"</h2>
-  {% assign tag_posts = site.tags[page.tag] %}
+{% assign topic = page.tag | replace: '-', ' ' | capitalize %}
+<p class="page-subtitle">Essays on {{ topic | downcase }}. <a class="plain-link" href="{{ '/blog.html' | relative_url }}">All essays →</a></p>
 
-  <div class="post-list">
-    {% for post in tag_posts %}
-      <article class="entry post-row">
-        <span class="dot" aria-hidden="true"></span>
-        <h3 class="title post-row-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-        <span class="fill"></span>
-        <time class="meta mono post-row-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-      </article>
-    {% endfor %}
+{% assign tag_posts = site.tags[page.tag] %}
+{% assign years = tag_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in years %}
+<section class="section" aria-labelledby="year-{{ year.name }}">
+  <h2 class="label" id="year-{{ year.name }}">{{ year.name }}</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {% for post in year.items %}
+      <li class="row">
+        <a class="row__title plain-link" href="{{ post.url | relative_url }}">{{ post.title | smartify }}</a>
+        <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
-</div>
+</section>
+{% endfor %}
