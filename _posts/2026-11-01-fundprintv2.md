@@ -9,7 +9,7 @@ description: "Runs entirely in your browser. With new UI"
 
 image: "https://shibaprasadb.github.io/images/posts/2026-11-01-fundprintv2/v2_thumbnail.png"
 ---
-After the [V1 release](https://www.shibaprasadb.com/2026/10/12/fundprint.html) of Fundprint, I got some feedback on what was working and what wasn't. Since then, I have been working on refining those things.
+After the [V1 release](https://www.shibaprasadb.com/2026/10/17/fundprint.html) of Fundprint, I got some feedback on what was working and what wasn't. Since then, I have been working on refining those things.
 
 Releasing [Fundprint V2](https://lab.shibaprasadb.com/fundprint/)
 
