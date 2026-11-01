@@ -1,7 +1,7 @@
 ---
 title: "Fundprint: Understand Your Mutual Funds Without Sharing Your Data"
 
-date: 2026-10-12
+date: 2026-10-17
 
 tags: ["product"]
 
