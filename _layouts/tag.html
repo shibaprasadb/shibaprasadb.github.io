@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign topic = page.tag | replace: '-', ' ' | capitalize %}
-<p class="page-subtitle">Essays on {{ topic | downcase }}. <a class="plain-link" href="{{ '/blog.html' | relative_url }}">All essays →</a></p>
+<p class="page-subtitle">Writing on {{ topic | downcase }}. <a class="plain-link" href="{{ '/blog.html' | relative_url }}">All writing →</a></p>
 
 {% assign tag_posts = site.tags[page.tag] %}
 {% assign years = tag_posts | group_by_exp: "post", "post.date | date: '%Y'" %}

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Essays
-description: "Essays on tech, product and data."
+title: Writing
+description: "Writing on product, strategy and data."
 ---
 {% comment %}
-  Topic filters are hidden until there are about 25 essays. When they come back:
+  Topic filters are hidden until there are about 25 posts. When they come back:
   three topics at most, sentence case, serif 16px.
 {% endcomment %}
-<p class="page-subtitle">Essays on tech, product and data.</p>
+<p class="page-subtitle">Writing on product, strategy and data.</p>
 
 {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 {% for year in years %}
