@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% set page_kind %}{% block page_kind %}page{% endblock %}{% endset %}
+    {% set page_kind = page_kind|trim %}
+    {% set meta_title %}{% block meta_title %}{{ SITENAME }}{% endblock %}{% endset %}
+    {% set meta_title = meta_title|trim %}
+    {% set meta_description %}{% block meta_description %}{% endblock %}{% endset %}
+    {% set meta_description = meta_description|striptags|replace('\n', '')|trim %}
+    {% if not meta_description %}{% set meta_description = SITENAME %}{% endif %}
+    {% set meta_image %}{% block meta_image %}/images/headshot.jpg{% endblock %}{% endset %}
+    {% set meta_image = meta_image|trim %}
+    {% set canonical_path %}{% block canonical_path %}/{% endblock %}{% endset %}
+    {% set canonical_path = canonical_path|trim %}
+    {% set canonical = SITEURL ~ canonical_path %}
+    {% if meta_image.startswith('http://') or meta_image.startswith('https://') %}
+        {% set og_image = meta_image %}
+    {% elif meta_image.startswith('/') %}
+        {% set og_image = SITEURL ~ meta_image %}
+    {% else %}
+        {% set og_image = SITEURL ~ '/' ~ meta_image %}
+    {% endif %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="{{ meta_title }}">
+    <meta property="og:description" content="{{ meta_description }}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
+    <meta property="og:url" content="{{ canonical }}">
+    <meta property="og:site_name" content="{{ SITENAME }}">
+    <meta property="og:image" content="{{ og_image }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ meta_title }}">
+    <meta name="twitter:description" content="{{ meta_description }}">
+    <meta name="twitter:image" content="{{ og_image }}">
+    {% if page_kind == 'home' %}
+    <title>{{ SITENAME }}</title>
+    {% else %}
+    <title>{{ meta_title }} — {{ SITENAME }}</title>
+    {% endif %}
+    <link rel="canonical" href="{{ canonical }}">
+    {% block jsonld %}{% endblock %}
+    <script>
+      // Apply the saved theme before first paint. No saved choice = follow the OS.
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (!theme && localStorage.getItem('dark-mode') === 'enabled') theme = 'dark';
+          if (theme === 'dark' || theme === 'light') document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="description" content="{{ meta_description|e }}">
+    <link rel="stylesheet" href="/style.css?v={{ BUILD_TIME }}">
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="alternate" type="application/atom+xml" title="{{ SITENAME }} RSS Feed" href="{{ SITEURL }}/feed.xml">
+    <link rel="me" href="https://mstdn.party/@shibaprasad">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+    <!-- Umami Analytics -->
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="2e67cd5c-f499-4fba-a139-481c5adb30c4"></script>
+</head>
+<body{% if PAGE_WIDTH == 'wide' %} class="layout-wide"{% endif %}>
+    {% include "_nav.html" %}
+    <main class="wrap">
+    {% block content %}{% endblock %}
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="site-footer__inner">
+          <p>
+            <a href="mailto:{{ SITE_EMAIL }}">Email</a><span class="sep" aria-hidden="true"> · </span>
+            <a href="https://www.linkedin.com/in/shibaprasad-bhattacharya/" target="_blank" rel="noopener">LinkedIn</a><span class="sep" aria-hidden="true"> · </span>
+            <a href="https://github.com/shibaprasadb" target="_blank" rel="noopener">GitHub</a><span class="sep" aria-hidden="true"> · </span>
+            <a href="{{ SCHOLAR_URL }}" target="_blank" rel="noopener">Google Scholar</a><span class="sep" aria-hidden="true"> · </span>
+            <a href="/feed.xml">RSS</a>
+          </p>
+          <p>© {{ BUILD_YEAR }} Shibaprasad Bhattacharya</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var toggle = document.getElementById('theme-toggle');
+        var media = window.matchMedia('(prefers-color-scheme: dark)');
+
+        function currentTheme() {
+          return root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light');
+        }
+
+        // Keep the giscus comments widget in step with the page theme.
+        function syncGiscus(theme) {
+          var frame = document.querySelector('iframe.giscus-frame');
+          if (frame) {
+            frame.contentWindow.postMessage({ giscus: { setConfig: { theme: theme } } }, 'https://giscus.app');
+          }
+        }
+
+        toggle.addEventListener('click', function () {
+          var next = currentTheme() === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', next);
+          try {
+            localStorage.setItem('theme', next);
+            localStorage.removeItem('dark-mode');
+          } catch (e) {}
+          syncGiscus(next);
+        });
+
+      })();
+    </script>
+</body>
+</html>

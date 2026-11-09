@@ -1,0 +1,7 @@
+pelican[markdown]==4.12.0
+markdown==3.11.3
+pygments==2.19.2
+typogrify==2.1.0
+pelican-yaml-metadata==2.2.0
+pelican-sitemap==1.2.2
+pelican-neighbors==1.2.0

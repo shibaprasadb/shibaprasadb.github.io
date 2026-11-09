@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page_kind %}blog{% endblock %}
+{% block meta_title %}Writing{% endblock %}
+{% block meta_description %}Writing on product, strategy and data.{% endblock %}
+{% block canonical_path %}/blog.html{% endblock %}
+{% block content %}
+<p class="page-subtitle">Writing on product, strategy and data.</p>
+
+{% for year in articles|sort(attribute='date', reverse=true)|groupby('date.year')|reverse %}
+<section class="section" aria-labelledby="year-{{ year.grouper }}">
+  <h2 class="label" id="year-{{ year.grouper }}">{{ year.grouper }}</h2>
+  <div class="section__body">
+    <ul class="rows">
+      {% for post in year.list %}
+      <li class="row">
+        <a class="row__title plain-link" href="/{{ post.url }}">{{ post.title|e }}</a>
+        <time class="date" datetime="{{ post.date.isoformat() }}">{{ post.date.strftime("%b %-d") }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

@@ -1,9 +1,10 @@
----
-layout: default
-title: Publications
----
+{% extends "base.html" %}
+{% block page_kind %}page{% endblock %}
+{% block meta_title %}Publications{% endblock %}
+{% block canonical_path %}/publications.html{% endblock %}
+{% block content %}
 <h1 class="page-title">Publications</h1>
-<p class="page-subtitle inline-links">The full list is on <a href="{{ site.scholar_url }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
+<p class="page-subtitle inline-links">The full list is on <a href="{{ SCHOLAR_URL }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
 <div class="prose">
     <ul>
         <li>Prediction of Responses in a CNC Milling Operation Using Random Forest Regressor (2022)</li>
@@ -14,3 +15,4 @@ title: Publications
         <li>Study on the effect of non-Newtonian nature of blood flowing through an elastic artery with slip condition (2017)</li>
     </ul>
 </div>
+{% endblock %}

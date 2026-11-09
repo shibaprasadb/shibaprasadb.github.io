@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block page_kind %}post{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block meta_title %}{{ article.title }}{% endblock %}
+{% block meta_description %}{% if article.description is defined and article.description %}{{ article.description }}{% else %}{{ article.summary }}{% endif %}{% endblock %}
+{% block meta_image %}{% if article.image is defined and article.image %}{{ article.image }}{% else %}/images/headshot.jpg{% endif %}{% endblock %}
+{% block canonical_path %}/{{ article.url }}{% endblock %}
+{% block jsonld %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ meta_title|tojson }},
+      "description": {{ meta_description|tojson }},
+      "image": {{ og_image|tojson }},
+      "datePublished": {{ article.date.isoformat()|tojson }},
+      "dateModified": {{ article.date.isoformat()|tojson }},
+      "url": {{ canonical|tojson }},
+      "mainEntityOfPage": {{ canonical|tojson }},
+      "author": {
+        "@type": "Person",
+        "name": "Shibaprasad Bhattacharya",
+        "url": {{ (SITEURL ~ '/')|tojson }}
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Shibaprasad Bhattacharya",
+        "url": {{ (SITEURL ~ '/')|tojson }}
+      }{% if article.tags %},
+      "keywords": {{ article.tags|map(attribute='name')|join(', ')|tojson }}{% endif %}
+    }
+    </script>
+{% endblock %}
+{% block content %}
+<article class="essay">
+  <header class="essay__header">
+    <p class="label essay__meta">
+      <time datetime="{{ article.date.isoformat() }}">{{ article.date.strftime("%b %-d, %Y") }}</time>
+      {%- for tag in article.tags -%}
+        <span aria-hidden="true"> · </span><a href="/{{ tag.url }}">{{ tag.name|replace('-', ' ') }}</a>
+      {%- endfor -%}
+    </p>
+    <h1 class="essay__title">{{ article.title|e }}</h1>
+  </header>
+  <div class="essay-body-wrap">
+    <div class="prose essay__body">
+      {{ article.content }}
+    </div>
+  </div>
+</article>
+
+{% if article.prev_article or article.next_article %}
+<nav class="essay-nav" aria-label="More writing">
+  {% if article.prev_article %}
+  <div class="essay-nav__prev">
+    <p class="label">Previous</p>
+    <a class="plain-link" href="/{{ article.prev_article.url }}">{{ article.prev_article.title|e }}</a>
+  </div>
+  {% endif %}
+  {% if article.next_article %}
+  <div class="essay-nav__next">
+    <p class="label">Next</p>
+    <a class="plain-link" href="/{{ article.next_article.url }}">{{ article.next_article.title|e }}</a>
+  </div>
+  {% endif %}
+</nav>
+{% endif %}
+
+<section class="essay-subscribe" aria-labelledby="subscribe-heading">
+  <h2 class="label" id="subscribe-heading">Subscribe to Ordinary Analysis</h2>
+  <iframe class="substack-embed" src="https://ordinaryanalysis.substack.com/embed" title="Subscribe to Ordinary Analysis" frameborder="0" scrolling="no"></iframe>
+</section>
+
+{% include "_giscus.html" %}
+{% endblock %}
