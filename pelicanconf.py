@@ -104,8 +104,9 @@ def gfm_slugify(value, separator, unicode=False):
 MARKDOWN = {
     "extension_configs": {
         "plugins.md_gfm:GFMListExtension": {},
+        # No nl2br: like Jekyll, a single line break inside a paragraph is
+        # just a space. End a line with two spaces to force a break.
         "markdown.extensions.extra": {},
-        "markdown.extensions.nl2br": {},
         "markdown.extensions.smarty": {},
         "markdown.extensions.codehilite": {
             "css_class": "highlight",

@@ -51,6 +51,11 @@
     </script>
     <meta name="description" content="{{ meta_description|e }}">
     <link rel="stylesheet" href="/style.css?v={{ BUILD_TIME }}">
+    <style>
+      /* Python-Markdown adds its own rule at the top of the footnotes.
+         Posts already have one just before, so hide the extra line. */
+      .prose .footnote > hr:first-child { display: none; }
+    </style>
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
     <link rel="alternate" type="application/atom+xml" title="{{ SITENAME }} RSS Feed" href="{{ SITEURL }}/feed.xml">
     <link rel="me" href="https://mstdn.party/@shibaprasad">
