@@ -19,11 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - uses: ruby/setup-ruby@v1
+      - uses: actions/setup-python@v5
         with:
-          ruby-version: '3.1'
-          bundler-cache: true
-      - run: bundle exec jekyll build
+          python-version: '3.12'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pelican -s publishconf.py
       - uses: actions/upload-pages-artifact@v4
         with:
           path: _site

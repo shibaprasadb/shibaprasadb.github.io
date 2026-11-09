@@ -1,159 +1,95 @@
 # shibaprasadb.github.io
 
-Personal website and blog for Shibaprasad Bhattacharya, built with Jekyll and hosted on GitHub Pages.
+Personal website and blog for Shibaprasad Bhattacharya, built with Pelican and hosted on GitHub Pages.
 
 **Live Site:** https://shibaprasadb.github.io
 
 ## Overview
 
-A minimal, responsive personal website featuring technical writing on analytics, product strategy, and data science. The site uses Jekyll's static site generation with custom layouts, a tag-based filtering system, and automated deployment through GitHub Actions.
+A minimal, responsive personal website featuring technical writing on analytics, product strategy, and data science. Posts are Markdown files in `_posts/`. Pelican renders the same URLs the Jekyll site used, and GitHub Actions deploys the result.
 
 ## Tech Stack
 
-- **Static Site Generator:** Jekyll 4.3
+- **Static Site Generator:** Pelican 4.12
 - **Deployment:** GitHub Pages via GitHub Actions
 - **Comments:** Giscus (GitHub Discussions)
 - **Analytics:** Umami
 - **Newsletter:** Substack integration
-- **RSS/Atom Feed:** Jekyll Feed plugin (`/feed.xml`)
+- **RSS/Atom Feed:** `/feed.xml`
 
 ## Local Development
 
 ### Prerequisites
 
-- Ruby 3.1+ (see `.ruby-version`)
-- Bundler (`gem install bundler`)
+- Python 3.12
 
 ### Setup
 
 ```bash
-# Clone repository
 git clone https://github.com/shibaprasadb/shibaprasadb.github.io.git
 cd shibaprasadb.github.io
 
-# Install dependencies
-bundle install
-
-# Start development server
-bundle exec jekyll serve
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-The site will be available at `http://localhost:4000` with automatic reload on file changes.
-
-### Build for Production
+### Preview
 
 ```bash
-bundle exec jekyll build
+pelican --autoreload --listen
 ```
 
-Output will be in the `_site/` directory.
+The site is served at `http://localhost:8000` and reloads when files change.
+
+### Production build
+
+```bash
+pelican -s publishconf.py
+```
+
+Output is written to `_site/`.
 
 ## Project Structure
 
 ```
 .
-├── _config.yml              # Jekyll configuration
-├── _includes/               # Reusable components (nav, comments, post lists)
-├── _layouts/                # Page templates (default, post, tag)
-├── _plugins/                # Custom plugins (tag page generator)
-├── _posts/                  # Blog posts (YYYY-MM-DD-title.md format)
+├── pelicanconf.py           # Site settings
+├── publishconf.py           # Production URLs and the Atom feed
+├── requirements.txt
+├── theme/templates/         # Layouts (base, post, tag, pages)
+├── plugins/                 # Feed id override
+├── _posts/                  # Blog posts (YYYY-MM-DD-title.md)
 ├── images/                  # Static assets
-├── .github/workflows/       # CI/CD pipeline
-└── *.html                   # Static pages (index, blog, publications, subscribe)
+└── .github/workflows/       # CI/CD pipeline
 ```
 
 ## Writing Content
 
-### Creating a Blog Post
+Add `_posts/YYYY-MM-DD-slug.md`, put images in `images/posts/YYYY-MM-DD-slug/`, then push to `main`.
 
-1. Create a new file in `_posts/` with the naming convention:
-   ```
-   YYYY-MM-DD-post-title.md
-   ```
+```markdown
+---
+title: "Post title"
+date: 2026-11-15
+tags: ["data-stories"]
+description: "One-line summary for previews and search."
+image: "https://shibaprasadb.github.io/images/posts/2026-11-15-slug/thumbnail.png"
+selected: true
+---
 
-2. Add front matter:
-   ```yaml
-   ---
-   layout: post
-   title: "Your Post Title"
-   tags: [tag1, tag2, tag3]
-   ---
-   ```
+Post body in Markdown.
+```
 
-3. Write content in Markdown below the front matter.
+`selected: true` shows the post on the homepage. Always fill in `description`. Without it, the preview text falls back to the opening of the post.
 
-Tags enable automatic filtering on the blog page and generate individual tag archive pages via the custom plugin in `_plugins/tag_generator.rb`.
+The date in front matter wins over the filename date. The slug is the filename after the date, with its capitalization kept, so a file named `2025-09-02-BeyondSubstack.md` stays at `/2025/09/02/BeyondSubstack.html`.
 
-### Editing Navigation
-
-Update `_includes/nav.html` to modify the navigation menu.
-
-### Customizing Layouts
-
-- **Base template:** `_layouts/default.html`
-- **Post template:** `_layouts/post.html`
-- **Tag archive:** `_layouts/tag.html`
-
-## Features
-
-### Tag-Based Filtering
-
-The blog page (`blog.html`) implements client-side tag filtering using vanilla JavaScript. The tag generator plugin automatically creates archive pages for each tag used in posts.
-
-### Comments System
-
-Blog posts include Giscus-powered comments. Configure in `_includes/giscus.html`:
-- Repository
-- Discussion category
-- Theme settings
-
-### Newsletter Integration
-
-Substack newsletter (Ordinary Analysis) signup forms are embedded on post pages and the dedicated subscribe page (`subscribe.html`).
-
-### Analytics
-
-Umami is integrated as the single analytics platform.
-
-Configuration is in `_layouts/default.html`.
+Tag pages are generated at `/tags/<tag>/`.
 
 ## Deployment
 
-### Automated (Recommended)
-
-Every push to the `main` branch triggers the GitHub Actions workflow (`.github/workflows/build.yml`):
-
-1. Sets up Ruby environment with dependency caching
-2. Runs `bundle exec jekyll build`
-3. Deploys to GitHub Pages
-
-### Manual Deployment
-
-For alternative hosting:
-
-```bash
-bundle exec jekyll build
-# Upload _site/ contents to your hosting provider
-```
-
-## Configuration
-
-Key settings in `_config.yml`:
-
-```yaml
-title: Shibaprasad Bhattacharya
-baseurl: ""
-url: "https://shibaprasadb.github.io"
-future: true  # Allows posts with future dates
-```
-
-## Dependencies
-
-Managed via Bundler (see `Gemfile`):
-
-- `jekyll ~> 4.3` - Core static site generator
-- `webrick ~> 1.7` - Required for Ruby 3.0+ when running `jekyll serve`
-- `jekyll-feed ~> 0.17` - Generates RSS/Atom feed at `feed.xml`
+Every push to `main` runs `.github/workflows/build.yml`: it installs the Python dependencies, runs `pelican -s publishconf.py`, and deploys `_site/` to GitHub Pages.
 
 ## License
 
