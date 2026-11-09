@@ -224,6 +224,13 @@ button:focus-visible {
   color: var(--text);
 }
 
+/* Drawn as an SVG, not the ↗ character, because iOS shows that character as a blue emoji. */
+.ext-arrow {
+  display: inline-block;
+  vertical-align: 0.05em;
+  margin-left: 1px;
+}
+
 .theme-toggle {
   flex-shrink: 0;
   width: 32px;
